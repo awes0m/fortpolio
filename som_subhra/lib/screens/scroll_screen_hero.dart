@@ -39,22 +39,49 @@ class ScrollScreenHero extends StatelessWidget {
               child: Align(
                 alignment: const Alignment(0, 0),
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.white,
+                          radius: height * .1,
+                          child: Image.asset(
+                            profileImage,
+                            height: height * .1,
+                            width: height * .1,
+                          ),
+                        ),
+                        SizedBox(width: width * .05),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Som Subhra',
+                              style: nameStyle!.copyWith(
+                                backgroundColor: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 10),
+                            Text(
+                              'Dreamer, Believer, Engineer',
+                              style: descriptionStyle!.copyWith(
+                                backgroundColor: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 40),
                     Text(
-                      'Som Subhra',
-                      style: nameStyle!.copyWith(
+                      "About Me",
+                      style: descriptionStyle.copyWith(
                         backgroundColor: Colors.white,
                       ),
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      'Dreamer, Believer, Engineer',
-                      style: descriptionStyle!.copyWith(
-                        backgroundColor: Colors.white,
-                      ),
-                    ),
+                    )
                   ],
                 ),
               )),

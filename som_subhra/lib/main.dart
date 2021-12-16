@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'functions/noScrollGlow.dart';
+import 'functions/no_scroll_glow.dart';
 import 'screens/scroll_screen_detail.dart';
 import 'screens/scroll_screen_hero.dart';
 import 'utils/constants.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'fortpolio',
+      title: 'fortpolio', //web title shown in the browser bar
       theme: themeData,
       home: const Homepage(),
     );
