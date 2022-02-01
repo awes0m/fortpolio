@@ -7,7 +7,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/globals.dart';
 import '../../../utils/screen_helper.dart';
-import 'header_items.dart';
+import 'component_items/header_items.dart';
 
 //header logo widget
 class HeaderLogo extends StatelessWidget {
@@ -20,12 +20,12 @@ class HeaderLogo extends StatelessWidget {
         cursor: SystemMouseCursors.click,
         child: GestureDetector(
           onTap: () {
-            print('Tapped');
+            print(' Logo Tapped');
           },
           child: RichText(
             text: TextSpan(children: [
               TextSpan(
-                  text: "S",
+                  text: r"$",
                   style: GoogleFonts.oswald(
                     color: Colors.white,
                     fontSize: 32,
@@ -39,7 +39,7 @@ class HeaderLogo extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   )),
               TextSpan(
-                  text: "M",
+                  text: "m",
                   style: GoogleFonts.oswald(
                     color: Colors.white,
                     fontSize: 32,

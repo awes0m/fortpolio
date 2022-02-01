@@ -6,7 +6,7 @@ import 'package:som_official/utils/globals.dart';
 import 'components/carousel.dart';
 import 'components/cv_sectiion.dart';
 import 'components/header.dart';
-import 'components/header_items.dart';
+import 'components/component_items/header_items.dart';
 
 //HomePage
 class HomePage extends StatelessWidget {
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              CvSection(),
+              const CvSection(),
             ],
           ),
         ),

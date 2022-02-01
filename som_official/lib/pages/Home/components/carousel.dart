@@ -3,7 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 //imports
-import 'carousel_items.dart';
+import 'component_items/carousel_items.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 
