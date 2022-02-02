@@ -1,12 +1,18 @@
 //dependencies
 import 'package:flutter/material.dart';
-import 'package:som_official/utils/constants.dart';
-import 'package:som_official/utils/globals.dart';
+
 //imports
 import 'components/carousel.dart';
-import 'components/cv_sectiion.dart';
+import 'components/cv_section.dart';
+import 'components/education_section.dart';
 import 'components/header.dart';
-import 'components/component_items/header_items.dart';
+import 'components/component_item_lists/header_items.dart';
+import 'components/skills_section.dart';
+import 'components/work_advert2.dart';
+import 'components/work_stats.dart';
+import '../../utils/constants.dart';
+import '../../utils/globals.dart';
+import 'components/work_advert1.dart';
 
 //HomePage
 class HomePage extends StatelessWidget {
@@ -81,9 +87,21 @@ class HomePage extends StatelessWidget {
               ),
               const Carousel(),
               const SizedBox(
+                //WhiteSpace 20
                 height: 20.0,
               ),
               const CvSection(),
+              const WorkAdvert1(),
+              SizedBox(height: 70.0), //White space 70
+              const WorkAdvert2(),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 28.0),
+                child: WorkStats(),
+              ),
+              const SizedBox(height: 50.0), //White space 50
+              const EducationSection(),
+              const SizedBox(height: 50.0), //White space 50
+              const SkillsSection(),
             ],
           ),
         ),

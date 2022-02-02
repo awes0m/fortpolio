@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:som_official/pages/Home/components/component_items/cvdesign_process_items.dart';
 import 'package:som_official/utils/constants.dart';
 import 'package:som_official/utils/screen_helper.dart';
+
+import 'component_item_lists/multiple_item_lists.dart';
 
 class CvSection extends StatelessWidget {
   const CvSection({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class CvSection extends StatelessWidget {
       width: double.infinity,
       child: ScreenHelper(
         desktop: _buildUI(context, 1000.0),
-        tablet: _buildUI(context, 760),
+        tablet: _buildUI(context, 760.0),
         mobile: _buildUI(context, MediaQuery.of(context).size.width * .8),
       ),
     );
@@ -28,7 +29,7 @@ Widget _buildUI(BuildContext context, double width) {
     minWidth: width,
     defaultScale: false,
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -66,7 +67,7 @@ Widget _buildUI(BuildContext context, double width) {
           child: LayoutBuilder(
             builder: (_context, constraints) {
               return ResponsiveGridView.builder(
-                padding: const EdgeInsets.all(8),
+                padding: const EdgeInsets.all(0),
                 shrinkWrap: true,
                 physics:
                     const NeverScrollableScrollPhysics(), // to disable GridView's scrolling
@@ -77,8 +78,8 @@ Widget _buildUI(BuildContext context, double width) {
                   crossAxisSpacing: 20,
                   maxCrossAxisExtent: ScreenHelper.isTablet(context) ||
                           ScreenHelper.isMobile(context)
-                      ? constraints.maxWidth / 2.0
-                      : 250.0,
+                      ? constraints.maxWidth / 2
+                      : 250.0, //direction of window all 4 horizontal if desktop/tablet or 2-2 vertical if mobile
                   //Hack to adjust child height
                   childAspectRatio: ScreenHelper.isDesktop(context)
                       ? 1.0
@@ -111,7 +112,7 @@ Widget _buildUI(BuildContext context, double width) {
                           ],
                         ),
                         const SizedBox(
-                          height: 14.0,
+                          height: 15.0,
                         ),
                         Text(
                           designProcesses[index].subtitle,
