@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 
 //imports
 import 'components/carousel.dart';
+import 'components/certifications_section.dart';
 import 'components/cv_section.dart';
 import 'components/education_section.dart';
+import 'components/footer.dart';
 import 'components/header.dart';
 import 'components/component_item_lists/header_items.dart';
 import 'components/skills_section.dart';
+import 'components/testimonials_section.dart';
 import 'components/work_advert2.dart';
 import 'components/work_stats.dart';
 import '../../utils/constants.dart';
@@ -102,6 +105,12 @@ class HomePage extends StatelessWidget {
               const EducationSection(),
               const SizedBox(height: 50.0), //White space 50
               const SkillsSection(),
+              const SizedBox(height: 50.0), //White space 50
+              const CertificationsSection(),
+              const SizedBox(height: 50.0), //White space 50
+              const Testimonials(),
+              const Footer(),
+              const SizedBox(height: 5.0), //White space 50
             ],
           ),
         ),

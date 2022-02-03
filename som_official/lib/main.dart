@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:som_official/utils/constants.dart';
 
-import 'pages/Home/homepage.dart';
+import 'Home/homepage.dart';
 
 void main() {
   runApp(const MyApp());

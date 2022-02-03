@@ -72,8 +72,8 @@ class Carousel extends StatelessWidget {
 Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
   return Center(
     child: ResponsiveWrapper(
-      maxWidth: 1000.0,
-      minWidth: 1000.0,
+      maxWidth: kDesktopMaxWidth,
+      minWidth: kDesktopMaxWidth,
       defaultScale: false,
       child: Row(
         children: [
@@ -89,8 +89,8 @@ Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
 Widget _buildTablet(BuildContext context, Widget text, Widget image) {
   return Center(
     child: ResponsiveWrapper(
-      maxWidth: 760.0,
-      minWidth: 760.0,
+      maxWidth: kTabletMaxWidth,
+      minWidth: kTabletMaxWidth,
       defaultScale: false,
       child: Row(
         children: [
@@ -106,7 +106,7 @@ Widget _buildTablet(BuildContext context, Widget text, Widget image) {
 Widget _buildMobile(BuildContext context, Widget text, Widget image) {
   return Container(
     constraints: BoxConstraints(
-      maxWidth: MediaQuery.of(context).size.width * .7,
+      maxWidth: getMobileMaxWidth(context),
     ),
     width: double.infinity,
     child: text,

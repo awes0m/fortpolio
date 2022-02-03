@@ -20,9 +20,9 @@ class WorkStats extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       child: ScreenHelper(
-        desktop: _buildUI(context, 1000.0),
-        tablet: _buildUI(context, 760),
-        mobile: _buildUI(context, MediaQuery.of(context).size.width * .8),
+        desktop: _buildUI(context, kDesktopMaxWidth),
+        tablet: _buildUI(context, kTabletMaxWidth),
+        mobile: _buildUI(context, getMobileMaxWidth(context)),
       ),
     );
   }

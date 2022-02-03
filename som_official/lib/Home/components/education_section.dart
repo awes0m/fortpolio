@@ -13,9 +13,9 @@ class EducationSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ScreenHelper(
-        desktop: _buildUi(context, 1000),
-        tablet: _buildUi(context, 760),
-        mobile: _buildUi(context, MediaQuery.of(context).size.width * .8),
+        desktop: _buildUi(context, kDesktopMaxWidth),
+        tablet: _buildUi(context, kTabletMaxWidth),
+        mobile: _buildUi(context, getMobileMaxWidth(context)),
       ),
     );
   }

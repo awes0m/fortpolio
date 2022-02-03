@@ -1,20 +1,23 @@
+//dependencies
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
-import 'package:som_official/utils/constants.dart';
-import 'package:som_official/utils/screen_helper.dart';
+import 'package:responsive_framework/responsive_wrapper.dart';
+//imports
+import '../../../utils/constants.dart';
+import '../../../utils/screen_helper.dart';
 
-class WorkAdvert1 extends StatelessWidget {
-  const WorkAdvert1({Key? key}) : super(key: key);
+class WorkAdvert2 extends StatelessWidget {
+  const WorkAdvert2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: ScreenHelper(
-      desktop: _buildUI(context, 1000.0),
-      tablet: _buildUI(context, 760),
-      mobile: _buildUI(context, MediaQuery.of(context).size.width * .8),
-    ));
+      child: ScreenHelper(
+        desktop: _buildUI(context, kDesktopMaxWidth),
+        tablet: _buildUI(context, kTabletMaxWidth),
+        mobile: _buildUI(context, getMobileMaxWidth(context)),
+      ),
+    );
   }
 
   Widget _buildUI(BuildContext context, double width) {
@@ -33,20 +36,12 @@ class WorkAdvert1 extends StatelessWidget {
               //Disable Expanded for mobile to avoid Render errors by setting flex to 0
               Expanded(
                 flex: constraints.maxWidth > 720 ? 1 : 0,
-                child: Image.asset(
-                  'assets/ios.png',
-                  //set width to 0 to avoid Render errors in smaller screens
-                  width: constraints.maxWidth > 720 ? null : 350.0,
-                ),
-              ),
-              Expanded(
-                flex: constraints.maxWidth > 720 ? 1 : 0,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Cross-Platform App',
+                      'Responsive Website',
                       style: GoogleFonts.oswald(
                         color: kPrimaryColor,
                         fontWeight: FontWeight.w900,
@@ -58,7 +53,7 @@ class WorkAdvert1 extends StatelessWidget {
                       height: 15.0,
                     ),
                     Text(
-                      'TRAVEL SHOP APP',
+                      'TRAVEL SHOP WEBSITE',
                       style: GoogleFonts.oswald(
                         color: Colors.white,
                         fontWeight: FontWeight.w900,
@@ -71,7 +66,7 @@ class WorkAdvert1 extends StatelessWidget {
                       height: 10.0,
                     ),
                     Text(
-                      'A travel shop app that helps you to find the best deals for your next trip.Lorem ipsum quatro tredemill , this is getting weird as i cant think of anything to write but i think this should be pretty long enough to be readable',
+                      'A travel shop WEBSITE that helps you to find the best deals for your next trip.Lorem ipsum quatro tredemill , this is getting weird as i cant think of anything to write but i think this should be pretty long enough to be readable',
                       style: GoogleFonts.oswald(
                         color: kCaptionColor,
                         fontSize: 15.0,
@@ -107,7 +102,7 @@ class WorkAdvert1 extends StatelessWidget {
                                     ),
                                   ))),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           //White space 10
                           width: 10.0,
                         ),
@@ -137,10 +132,22 @@ class WorkAdvert1 extends StatelessWidget {
                                   ),
                                 ),
                               )),
-                        )
+                        ),
                       ],
                     ),
                   ],
+                ),
+              ),
+              SizedBox(
+                //White space 25
+                height: 25.0,
+              ),
+              Expanded(
+                flex: constraints.maxWidth > 720 ? 1 : 0,
+                child: Image.asset(
+                  'assets/laptop.png',
+                  //set width to 0 to avoid Render errors in smaller screens
+                  width: constraints.maxWidth > 720 ? null : 350.0,
                 ),
               ),
             ],

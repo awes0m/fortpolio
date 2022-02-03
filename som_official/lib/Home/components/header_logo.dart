@@ -20,21 +20,22 @@ class HeaderLogo extends StatelessWidget {
             text: TextSpan(children: [
               TextSpan(
                   text: r"$",
-                  style: GoogleFonts.oswald(
+                  style: GoogleFonts.syneTactile(
+                    // fontStyle: FontStyle.italic,
                     color: Colors.white,
-                    fontSize: 32,
+                    fontSize: 35,
                     fontWeight: FontWeight.bold,
                   )),
               TextSpan(
-                  text: ".",
-                  style: GoogleFonts.oswald(
+                  text: "o",
+                  style: GoogleFonts.comforter(
                     color: Colors.white,
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
                   )),
               TextSpan(
-                  text: "m",
-                  style: GoogleFonts.oswald(
+                  text: "M",
+                  style: GoogleFonts.comforter(
                     color: Colors.white,
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
