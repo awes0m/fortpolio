@@ -14,9 +14,9 @@ class ScreenHelper extends StatelessWidget {
 
   //Define booleans that  checks the screen size
   static bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width < 800;
+      MediaQuery.of(context).size.width < 760;
   static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 800 &&
+      MediaQuery.of(context).size.width >= 760 &&
       MediaQuery.of(context).size.width < 1200;
   static bool isDesktop(BuildContext context) =>
       MediaQuery.of(context).size.width >= 1200;

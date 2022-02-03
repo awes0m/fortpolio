@@ -57,19 +57,20 @@ Widget _buildUI(BuildContext context, double width) {
         minWidth: width,
         defaultScale: false,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 50.0),
               child: Wrap(
-                spacing: 20.0,
-                runSpacing: 20.0,
+                // spacing: 20.0,
+                // runSpacing: 20.0,
                 children: footerItems
                     .map((footerItem) => Container(
                           height: 120.0,
-                          width: ScreenHelper.isMobile(context)
-                              ? constraints.maxWidth / 2.0 - 20.0
-                              : constraints.maxWidth / 6,
+                          width: ScreenHelper.isMobile(context) ||
+                                  ScreenHelper.isTablet(context)
+                              ? constraints.maxWidth / 2.4 - 20
+                              : constraints.maxWidth / 5.5 - 10,
                           child: Container(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
