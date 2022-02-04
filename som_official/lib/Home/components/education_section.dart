@@ -4,6 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 
+import '../../utils/globals.dart';
 import 'component_item_lists/multiple_item_lists.dart';
 
 class EducationSection extends StatelessWidget {
@@ -12,6 +13,7 @@ class EducationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Globals.educationKey,
       child: ScreenHelper(
         desktop: _buildUi(context, kDesktopMaxWidth),
         tablet: _buildUi(context, kTabletMaxWidth),

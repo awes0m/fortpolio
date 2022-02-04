@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:som_official/utils/constants.dart';
+import 'package:som_official/utils/globals.dart';
 import 'package:som_official/utils/screen_helper.dart';
 
 import 'component_item_lists/multiple_item_lists.dart';
@@ -12,6 +13,7 @@ class CvSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Globals.cvSectionKey,
       width: double.infinity,
       child: ScreenHelper(
         desktop: _buildUI(context, kDesktopMaxWidth),
@@ -48,13 +50,23 @@ Widget _buildUI(BuildContext context, double width) {
               },
               child: MouseRegion(
                 cursor: SystemMouseCursors.click,
-                child: Text(
-                  "Download CV",
-                  style: GoogleFonts.oswald(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    border: Border.all(
                       color: kPrimaryColor,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w800,
-                      height: 1.8),
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10),
+                  child: Text(
+                    "Download CV",
+                    style: GoogleFonts.oswald(
+                        color: kPrimaryColor,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w800,
+                        height: 1.8),
+                  ),
                 ),
               ),
             ),

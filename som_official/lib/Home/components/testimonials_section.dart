@@ -5,6 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:som_official/utils/constants.dart';
 //imports
 import '../../models/testimonial.dart';
+import '../../utils/globals.dart';
 import '../../utils/screen_helper.dart';
 
 final List<Testimonial> testimonials = [
@@ -27,6 +28,7 @@ class Testimonials extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Globals.testimonialsKey,
       child: ScreenHelper(
         desktop: _buildUI(context, kDesktopMaxWidth),
         tablet: _buildUI(context, kTabletMaxWidth),

@@ -1,23 +1,30 @@
 //imports
+import 'package:flutter/cupertino.dart';
+import 'package:som_official/utils/globals.dart';
+
 import '../../../../models/header_items.dart';
 
 //list of Header Tabs
 List<HeaderItem> headerItems = [
   HeaderItem(
     title: 'Home',
-    onTap: () {},
+    onTap: () => scrollToSection(Globals.carouselKey),
   ),
   HeaderItem(
     title: 'My Profile',
-    onTap: () {},
+    onTap: () => scrollToSection(Globals.cvSectionKey),
   ),
   HeaderItem(
-    title: 'Services',
-    onTap: () {},
+    title: 'Works',
+    onTap: () => scrollToSection(Globals.workadvert1Key),
+  ),
+  HeaderItem(
+    title: 'Skills',
+    onTap: () => scrollToSection(Globals.skillsKey),
   ),
   HeaderItem(
     title: 'Testimonials',
-    onTap: () {},
+    onTap: () => scrollToSection(Globals.testimonialsKey),
   ),
   HeaderItem(
     title: 'Blogs',
@@ -29,3 +36,13 @@ List<HeaderItem> headerItems = [
     isButton: true,
   ),
 ];
+
+Future<void> scrollToSection(itemkey) async {
+  //scroll to section
+  final context = itemkey.currentContext;
+  await Scrollable.ensureVisible(
+    context,
+    duration: const Duration(milliseconds: 600),
+    curve: Curves.slowMiddle,
+  );
+}

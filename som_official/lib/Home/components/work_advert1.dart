@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:som_official/utils/constants.dart';
+import 'package:som_official/utils/globals.dart';
 import 'package:som_official/utils/screen_helper.dart';
+
+import 'component_item_lists/header_items.dart';
 
 class WorkAdvert1 extends StatelessWidget {
   const WorkAdvert1({Key? key}) : super(key: key);
@@ -10,6 +13,7 @@ class WorkAdvert1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Globals.workadvert1Key,
       child: ScreenHelper(
         desktop: _buildUI(context, kDesktopMaxWidth),
         tablet: _buildUI(context, kTabletMaxWidth),
@@ -126,7 +130,8 @@ class WorkAdvert1 extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 28.0),
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () =>
+                                    scrollToSection(Globals.workadvert2Key),
                                 child: const Center(
                                   child: Text(
                                     'NEXT >',

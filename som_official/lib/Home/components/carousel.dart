@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 //imports
+import '../../utils/globals.dart';
 import 'component_item_lists/carousel_items.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
@@ -18,6 +19,7 @@ class Carousel extends StatelessWidget {
         (ScreenHelper.isMobile(context) ? .7 : .85); // 70% of the screen height
 
     return Container(
+      key: Globals.carouselKey,
       height: carouselContainerHeight,
       width: double.infinity,
       child: Column(
