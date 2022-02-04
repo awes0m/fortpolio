@@ -36,13 +36,3 @@ List<HeaderItem> headerItems = [
     isButton: true,
   ),
 ];
-
-Future<void> scrollToSection(itemkey) async {
-  //scroll to section
-  final context = itemkey.currentContext;
-  await Scrollable.ensureVisible(
-    context,
-    duration: const Duration(milliseconds: 600),
-    curve: Curves.slowMiddle,
-  );
-}

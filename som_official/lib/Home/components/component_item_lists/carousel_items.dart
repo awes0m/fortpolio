@@ -15,7 +15,7 @@ List<CarouselItemModel> carouselItems = List.generate(
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          'PRODUCT DESIGNER',
+          'NETWORK ENGINEER/ \nDEVELOPER',
           style: GoogleFonts.oswald(
             color: kPrimaryColor,
             fontSize: 16.0,
@@ -41,7 +41,7 @@ List<CarouselItemModel> carouselItems = List.generate(
         ),
         const Text(
           //Self Describing
-          'CyberSecurity Engineer and Application developer based in Kolkata',
+          'CyberSecurity Engineer and Cross-Platform developer based in Kolkata',
           style: TextStyle(
             color: kCaptionColor,
             fontSize: 15.0,
