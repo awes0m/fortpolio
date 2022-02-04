@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-const Color kPrimaryColor = Color.fromRGBO(21, 181, 114, 1);
-const Color kSecondaryColor = Color.fromRGBO(7, 17, 26, 1);
-const Color kDangerColor = Color.fromRGBO(249, 77, 30, 1);
-const Color kCaptionColor = Color.fromRGBO(166, 177, 187, 1);
+const Color kPrimaryColor = Color.fromRGBO(39, 154, 70, 1);
+const Color kSecondaryColor = Color.fromRGBO(15, 14, 14, 1);
+const Color kDangerColor = Colors.orange;
+const Color kCaptionColor = Color.fromRGBO(238, 238, 238, 1);
 
 const double kDesktopMaxWidth = 1000;
 const double kTabletMaxWidth = 760.0;
