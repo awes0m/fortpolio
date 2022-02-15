@@ -9,7 +9,7 @@ class HeaderLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: GestureDetector(

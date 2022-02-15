@@ -66,12 +66,12 @@ Widget _buildUi(BuildContext context, double width) {
           ),
           LayoutBuilder(
             builder: (context, constraints) {
-              return Container(
+              return SizedBox(
                 child: Wrap(
                   spacing: 20.0,
                   runSpacing: 20.0,
                   children: educationList
-                      .map((education) => Container(
+                      .map((education) => SizedBox(
                             width: constraints.maxWidth / 2.0 - 20.0,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

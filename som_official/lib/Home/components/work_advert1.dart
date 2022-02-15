@@ -5,7 +5,6 @@ import 'package:som_official/utils/constants.dart';
 import 'package:som_official/utils/globals.dart';
 import 'package:som_official/utils/screen_helper.dart';
 
-import 'component_item_lists/header_items.dart';
 
 class WorkAdvert1 extends StatelessWidget {
   const WorkAdvert1({Key? key}) : super(key: key);
@@ -112,7 +111,7 @@ class WorkAdvert1 extends StatelessWidget {
                                     ),
                                   ))),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           //White space 10
                           width: 10.0,
                         ),

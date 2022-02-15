@@ -75,7 +75,7 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: ScreenHelper(
         desktop: Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),

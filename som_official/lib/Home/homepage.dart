@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-      body: Container(
+      body: SizedBox(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -94,30 +94,30 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Carousel(),
-                    const SizedBox(
+                  children: const [
+                    Carousel(),
+                    SizedBox(
                       //WhiteSpace 20
                       height: 20.0,
                     ),
-                    const CvSection(),
-                    const WorkAdvert1(),
+                    CvSection(),
+                    WorkAdvert1(),
                     SizedBox(height: 70.0), //White space 70
-                    const WorkAdvert2(),
-                    const Padding(
+                    WorkAdvert2(),
+                    Padding(
                       padding: EdgeInsets.symmetric(vertical: 28.0),
                       child: WorkStats(),
                     ),
-                    const SizedBox(height: 50.0), //White space 50
-                    const EducationSection(),
-                    const SizedBox(height: 50.0), //White space 50
-                    const SkillsSection(),
-                    const SizedBox(height: 50.0), //White space 50
-                    const CertificationsSection(),
-                    const SizedBox(height: 50.0), //White space 50
-                    const Testimonials(),
-                    const Footer(),
-                    const SizedBox(height: 5.0), //White space 50
+                    SizedBox(height: 50.0), //White space 50
+                    EducationSection(),
+                    SizedBox(height: 50.0), //White space 50
+                    SkillsSection(),
+                    SizedBox(height: 50.0), //White space 50
+                    CertificationsSection(),
+                    SizedBox(height: 50.0), //White space 50
+                    Testimonials(),
+                    Footer(),
+                    SizedBox(height: 5.0), //White space 50
                   ],
                 ),
               ),

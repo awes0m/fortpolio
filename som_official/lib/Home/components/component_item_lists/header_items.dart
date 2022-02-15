@@ -1,5 +1,4 @@
 //imports
-import 'package:flutter/cupertino.dart';
 import 'package:som_official/utils/globals.dart';
 
 import '../../../../models/header_items.dart';

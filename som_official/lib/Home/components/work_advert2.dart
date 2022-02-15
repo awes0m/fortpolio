@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
-import 'package:som_official/Home/components/component_item_lists/header_items.dart';
 //imports
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
@@ -142,7 +141,7 @@ class WorkAdvert2 extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 //White space 25
                 height: 25.0,
               ),

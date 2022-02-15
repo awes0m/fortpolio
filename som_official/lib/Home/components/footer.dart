@@ -39,7 +39,7 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: ScreenHelper(
         desktop: _buildUI(context, 1000.0),
         tablet: _buildUI(context, 760),
@@ -65,13 +65,13 @@ Widget _buildUI(BuildContext context, double width) {
                 // spacing: 20.0,
                 // runSpacing: 20.0,
                 children: footerItems
-                    .map((footerItem) => Container(
+                    .map((footerItem) => SizedBox(
                           height: 120.0,
                           width: ScreenHelper.isMobile(context) ||
                                   ScreenHelper.isTablet(context)
                               ? constraints.maxWidth / 2.4 - 20
                               : constraints.maxWidth / 5.5 - 10,
-                          child: Container(
+                          child: SizedBox(
                             child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

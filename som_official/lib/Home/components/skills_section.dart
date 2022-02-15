@@ -110,7 +110,7 @@ Widget _buildUi(BuildContext context, double width) {
                                           width: 10.0,
                                         ),
                                         Text("${skill.percentage}%",
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colors.white,
                                               fontSize: 16.0,
                                               height: 1.5,

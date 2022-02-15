@@ -8,7 +8,7 @@ import '../../../../utils/constants.dart';
 List<CarouselItemModel> carouselItems = List.generate(
   5,
   (index) => CarouselItemModel(
-    text: Container(
+    text: SizedBox(
         child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +52,7 @@ List<CarouselItemModel> carouselItems = List.generate(
         const SizedBox(
           height: 20.0,
         ),
-        Container(
+        SizedBox(
           child: Wrap(
             children: [
               const Text(
@@ -114,7 +114,7 @@ List<CarouselItemModel> carouselItems = List.generate(
         )
       ],
     )),
-    image: Container(
+    image: SizedBox(
       // my image
       child: Image.asset(
         'assets/person.png',

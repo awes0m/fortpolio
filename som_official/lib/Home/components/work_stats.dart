@@ -28,7 +28,7 @@ class WorkStats extends StatelessWidget {
   }
 
   Widget _buildUI(BuildContext context, double width) {
-    return Container(
+    return SizedBox(
       child: ResponsiveWrapper(
         maxWidth: width,
         minWidth: width,
@@ -59,7 +59,7 @@ class WorkStats extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(width: 10.0),
+                      const SizedBox(width: 10.0),
                       Text(
                         stats[index].text,
                         style: const TextStyle(

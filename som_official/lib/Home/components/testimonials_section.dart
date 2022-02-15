@@ -110,7 +110,7 @@ Widget _buildUI(BuildContext context, double width) {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                          SizedBox(
                             child: Image.asset(
                               "assets/quote.png",
                               width: 50.0,

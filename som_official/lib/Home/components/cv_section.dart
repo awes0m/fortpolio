@@ -12,7 +12,7 @@ class CvSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       key: Globals.cvSectionKey,
       width: double.infinity,
       child: ScreenHelper(
@@ -75,7 +75,7 @@ Widget _buildUI(BuildContext context, double width) {
         const SizedBox(
           height: 50.0,
         ),
-        Container(
+        SizedBox(
           child: LayoutBuilder(
             builder: (_context, constraints) {
               return ResponsiveGridView.builder(
