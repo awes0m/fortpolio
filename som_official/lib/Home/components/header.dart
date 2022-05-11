@@ -10,20 +10,21 @@ import '../../../utils/screen_helper.dart';
 import 'component_item_lists/header_items.dart';
 import 'header_logo.dart';
 
-//header menu widget
 class HeaderRow extends StatelessWidget {
+  /// header menu widget
   const HeaderRow({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    /// Handle the header row layout for different screen sizes
     return ResponsiveVisibility(
       visible: false,
       visibleWhen: const [Condition.largerThan(name: 'MOBILE')],
       child: Row(
         children: headerItems
             .map((item) => item.isButton
+                //if {isButton} displays Button
                 ? MouseRegion(
-                    //if button displays Button
                     cursor: SystemMouseCursors.click,
                     child: Container(
                       decoration: BoxDecoration(
@@ -45,8 +46,9 @@ class HeaderRow extends StatelessWidget {
                       ),
                     ),
                   )
+
+                /// if not button displays textbutton
                 : MouseRegion(
-                    //if not button displays textbutton type entry
                     cursor: SystemMouseCursors.click,
                     child: Container(
                       margin: const EdgeInsets.only(right: 30),
@@ -55,7 +57,7 @@ class HeaderRow extends StatelessWidget {
                         child: Text(
                           item.title,
                           style: GoogleFonts.oswald(
-                            color: Colors.white,
+                            color: kDangerColor,
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
                           ),
@@ -69,8 +71,8 @@ class HeaderRow extends StatelessWidget {
   }
 }
 
-//header widget
 class Header extends StatelessWidget {
+  /// header widget
   const Header({Key? key}) : super(key: key);
 
   @override
@@ -88,7 +90,7 @@ class Header extends StatelessWidget {
   }
 }
 
-//header for desktop and tablets
+/// header for desktop and tablets
 Widget buildHeader() {
   return Container(
     padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -102,7 +104,7 @@ Widget buildHeader() {
   );
 }
 
-//header for mobile
+/// header for mobile
 Widget buildMobileHeader() {
   return SafeArea(
     child: Padding(
@@ -117,7 +119,7 @@ Widget buildMobileHeader() {
               },
               child: const Icon(
                 FontAwesomeIcons.bars,
-                color: Colors.white,
+                color: kDangerColor,
                 size: 28.0,
               )),
         ],

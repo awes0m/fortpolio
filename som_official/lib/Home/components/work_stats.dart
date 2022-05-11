@@ -56,7 +56,7 @@ class WorkStats extends StatelessWidget {
                         style: GoogleFonts.oswald(
                           fontSize: 32.0,
                           fontWeight: FontWeight.w700,
-                          color: Colors.white,
+                          color: kPrimaryColor,
                         ),
                       ),
                       const SizedBox(width: 10.0),

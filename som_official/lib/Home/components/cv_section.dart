@@ -4,6 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:som_official/utils/constants.dart';
 import 'package:som_official/utils/globals.dart';
 import 'package:som_official/utils/screen_helper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'component_item_lists/multiple_item_lists.dart';
 
@@ -39,14 +40,17 @@ Widget _buildUI(BuildContext context, double width) {
             Text(
               "BETTER EXPERIENCE \nBETTER SECURITY",
               style: GoogleFonts.oswald(
-                  color: Colors.white,
+                  color: kDangerColor,
                   fontWeight: FontWeight.w800,
                   fontSize: 18.0,
                   height: 1.8),
             ),
+
+            /// download CV- Link to Google Drive CV
             GestureDetector(
               onTap: () {
-                print(" Download Cv clicked");
+                // print(" Download Cv clicked");
+                launchUrl(Uri.parse(cvDownloadUrl));
               },
               child: MouseRegion(
                 cursor: SystemMouseCursors.click,
@@ -72,17 +76,15 @@ Widget _buildUI(BuildContext context, double width) {
             ),
           ],
         ),
-        const SizedBox(
-          height: 50.0,
-        ),
+        const SizedBox(height: 50.0),
         SizedBox(
           child: LayoutBuilder(
             builder: (_context, constraints) {
               return ResponsiveGridView.builder(
                 padding: const EdgeInsets.all(0),
                 shrinkWrap: true,
-                physics:
-                    const NeverScrollableScrollPhysics(), // to disable GridView's scrolling
+                //Now to disable GridView's scrolling
+                physics: const NeverScrollableScrollPhysics(),
                 alignment: Alignment.topCenter,
                 gridDelegate: ResponsiveGridDelegate(
                   // to set the size of the grid
@@ -116,16 +118,14 @@ Widget _buildUI(BuildContext context, double width) {
                             Text(
                               designProcesses[index].title,
                               style: GoogleFonts.oswald(
-                                color: Colors.white,
+                                color: kDangerColor,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20.0,
                               ),
                             )
                           ],
                         ),
-                        const SizedBox(
-                          height: 15.0,
-                        ),
+                        const SizedBox(height: 15.0),
                         Text(
                           designProcesses[index].subtitle,
                           style: const TextStyle(

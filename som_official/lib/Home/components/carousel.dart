@@ -9,6 +9,7 @@ import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 
 class Carousel extends StatelessWidget {
+  ///The first section of the resume, it contains the Name, the Job Title and short description of the person
   const Carousel({Key? key}) : super(key: key);
 
   @override
@@ -70,7 +71,7 @@ class Carousel extends StatelessWidget {
   }
 }
 
-//For big Screens
+/// For big Screens
 Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
   return Center(
     child: ResponsiveWrapper(
@@ -87,7 +88,7 @@ Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
   );
 }
 
-// for medium screens
+/// for medium screens
 Widget _buildTablet(BuildContext context, Widget text, Widget image) {
   return Center(
     child: ResponsiveWrapper(
@@ -104,7 +105,7 @@ Widget _buildTablet(BuildContext context, Widget text, Widget image) {
   );
 }
 
-//for Small screens
+/// for Small screens
 Widget _buildMobile(BuildContext context, Widget text, Widget image) {
   return Container(
     constraints: BoxConstraints(

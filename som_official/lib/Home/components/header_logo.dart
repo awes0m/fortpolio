@@ -2,9 +2,10 @@
 import 'package:flutter/material.dart';
 //imports
 import 'package:google_fonts/google_fonts.dart';
+import 'package:som_official/utils/constants.dart';
 
-//header logo widget
 class HeaderLogo extends StatelessWidget {
+  /// Header logo widget
   const HeaderLogo({Key? key}) : super(key: key);
 
   @override
@@ -22,21 +23,21 @@ class HeaderLogo extends StatelessWidget {
                   text: r"$",
                   style: GoogleFonts.syneTactile(
                     // fontStyle: FontStyle.italic,
-                    color: Colors.white,
+                    color: kDangerColor,
                     fontSize: 35,
                     fontWeight: FontWeight.bold,
                   )),
               TextSpan(
                   text: "o",
                   style: GoogleFonts.comforter(
-                    color: Colors.white,
+                    color: kDangerColor,
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
                   )),
               TextSpan(
                   text: "M",
                   style: GoogleFonts.comforter(
-                    color: Colors.white,
+                    color: kDangerColor,
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
                   )),

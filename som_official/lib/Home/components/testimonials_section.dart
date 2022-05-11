@@ -47,18 +47,18 @@ Widget _buildUI(BuildContext context, double width) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              /// TESTIMONIALS text
               Text(
                 "TESTIMONIALS",
                 style: GoogleFonts.oswald(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
-                  color: Colors.white,
+                  color: kDangerColor,
                   height: 1.3,
                 ),
               ),
-              const SizedBox(
-                height: 5.0,
-              ), //space between text and image 5
+              const SizedBox(height: 5.0), //space between text and image 5
+              /// section descriptive paragraphs
               Container(
                 constraints: const BoxConstraints(
                   maxWidth: 400.0,
@@ -70,10 +70,12 @@ Widget _buildUI(BuildContext context, double width) {
                         text:
                             'This is the Portfolio section. It is a place where you can showcase your work. You can have a look at my works here',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: kDangerColor,
                           height: 1.3,
                         ),
                       ),
+
+                      /// link to portfolio
                       TextSpan(
                         text: "\nClick here to contact us!",
                         style: GoogleFonts.oswald(
@@ -86,7 +88,7 @@ Widget _buildUI(BuildContext context, double width) {
                         text: "\nPlease subscribe to my youtube channel!",
                         style: GoogleFonts.oswald(
                           fontWeight: FontWeight.w700,
-                          color: Colors.white,
+                          color: kDangerColor,
                           height: 1.8,
                         ),
                       ),
@@ -94,9 +96,9 @@ Widget _buildUI(BuildContext context, double width) {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 5.0,
-              ),
+              const SizedBox(height: 5.0),
+
+              /// Testimonial quotes and images
               Flex(
                 direction: ScreenHelper.isMobile(context)
                     ? Axis.vertical
@@ -110,16 +112,17 @@ Widget _buildUI(BuildContext context, double width) {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          ///quote symbol
                           SizedBox(
                             child: Image.asset(
                               "assets/quote.png",
                               width: 50.0,
                             ),
                           ),
-                          const SizedBox(
-                            //space between 10
-                            height: 15.0,
-                          ),
+                          //space between 10
+                          const SizedBox(height: 15.0),
+
+                          /// Testimonial text
                           Text(
                             testimonial.text,
                             style: const TextStyle(
@@ -127,43 +130,43 @@ Widget _buildUI(BuildContext context, double width) {
                               height: 1.8,
                             ),
                           ),
-                          const SizedBox(
-                            //space between 10
-                            height: 15.0,
-                          ),
+                          const SizedBox(height: 15.0), //space between 10
+                          /// Person name,image,occupation
                           Row(
                             children: [
+                              /// Asset image
                               CircleAvatar(
                                 radius: 25.0,
                                 backgroundColor: Colors.transparent,
                                 backgroundImage:
                                     AssetImage(testimonial.profilephoto),
                               ),
-                              const SizedBox(
-                                width: 20.0,
-                              ),
+                              const SizedBox(width: 20.0),
+
+                              /// Person name and occupation
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                  /// Person name
                                   Text(
                                     testimonial.personname,
                                     style: GoogleFonts.oswald(
                                       fontWeight: FontWeight.w700,
-                                      color: Colors.white,
+                                      color: kDangerColor,
                                       fontSize: 16.0,
                                     ),
                                   ),
+
+                                  /// Person occupation
                                   Text(
                                     testimonial.occupation,
                                     style: const TextStyle(
                                       fontWeight: FontWeight.w700,
-                                      color: Colors.white,
+                                      color: kPrimaryColor,
                                       fontSize: 16.0,
                                     ),
                                   ),
-                                  const SizedBox(
-                                    height: 4.0,
-                                  )
+                                  const SizedBox(height: 4.0)
                                 ],
                               )
                             ],

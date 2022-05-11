@@ -1,5 +1,6 @@
 //dependencies
 import 'package:flutter/material.dart';
+import 'package:som_official/Home/components/workex_section.dart';
 import 'package:som_official/utils/screen_helper.dart';
 
 //imports
@@ -11,14 +12,14 @@ import 'components/footer.dart';
 import 'components/header.dart';
 import 'components/component_item_lists/header_items.dart';
 import 'components/skills_section.dart';
-import 'components/testimonials_section.dart';
-import 'components/work_advert2.dart';
+// import 'components/testimonials_section.dart';
+// import 'components/work_advert2.dart';
 import 'components/work_stats.dart';
 import '../../utils/constants.dart';
 import '../../utils/globals.dart';
-import 'components/work_advert1.dart';
+// import 'components/work_advert1.dart';
 
-//HomePage
+/// The main Page containing all the sections of the resume
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -88,7 +89,10 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Header(), //fixed header at top of the page(column)
+            /// fixed header at top of the page(column)
+            const Header(),
+
+            /// Body of the page
             Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
@@ -96,26 +100,31 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Carousel(),
-                    SizedBox(
-                      //WhiteSpace 20
-                      height: 20.0,
-                    ),
+                    SizedBox(height: 20.0), //WhiteSpace 20
                     CvSection(),
-                    WorkAdvert1(),
-                    SizedBox(height: 70.0), //White space 70
-                    WorkAdvert2(),
+                    // WorkAdvert1(),
+                    // SizedBox(height: 70.0), //White space 70
+                    // WorkAdvert2(),
+
+                    /// WorkStats
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 28.0),
                       child: WorkStats(),
                     ),
+
                     SizedBox(height: 50.0), //White space 50
                     EducationSection(),
                     SizedBox(height: 50.0), //White space 50
                     SkillsSection(),
                     SizedBox(height: 50.0), //White space 50
+                    WorkexSection(),
+                    SizedBox(height: 25.0), //White space 25
                     CertificationsSection(),
-                    SizedBox(height: 50.0), //White space 50
-                    Testimonials(),
+                    SizedBox(height: 25.0), //White space 25 //White space 50
+
+                    SizedBox(height: 70.0), //White space 50
+                    // Testimonials(),
+
                     Footer(),
                     SizedBox(height: 5.0), //White space 50
                   ],

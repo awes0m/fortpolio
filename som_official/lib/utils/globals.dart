@@ -6,6 +6,7 @@ class Globals {
   static GlobalKey cvSectionKey = GlobalKey();
   static GlobalKey workadvert1Key = GlobalKey();
   static GlobalKey workadvert2Key = GlobalKey();
+  static GlobalKey workexKey = GlobalKey();
   static GlobalKey educationKey = GlobalKey();
   static GlobalKey skillsKey = GlobalKey();
   static GlobalKey testimonialsKey = GlobalKey();

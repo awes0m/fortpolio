@@ -39,7 +39,8 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      color: kPrimaryColor.withOpacity(0.2),
       child: ScreenHelper(
         desktop: _buildUI(context, 1000.0),
         tablet: _buildUI(context, 760),
@@ -76,20 +77,23 @@ Widget _buildUI(BuildContext context, double width) {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
+                                    mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
+                                      /// Footer Icon
                                       Image.asset(
                                         footerItem.iconPath,
                                         width: 25.0,
                                       ),
                                       const SizedBox(
                                           width: 15.0), //horizontal spacing 15
+                                      /// Footer Item Title
                                       Text(
                                         footerItem.title,
                                         style: GoogleFonts.oswald(
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w700,
-                                          color: Colors.white,
+                                          color: kDangerColor,
                                         ),
                                       ),
                                     ],
@@ -151,7 +155,7 @@ Widget _buildUI(BuildContext context, double width) {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print("facebook");
+                        //TODO: add link to facebook
                       },
                       //privacy policy
                       child: const MouseRegion(

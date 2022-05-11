@@ -12,7 +12,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -38,7 +37,8 @@ class MyApp extends StatelessWidget {
           const ResponsiveBreakpoint.resize(2460, name: "4k"), //4k
         ],
         background: Container(
-          color: kSecondaryColor, //set background color
+          //set background color
+          color: kSecondaryColor,
         ),
       ),
       home: const HomePage(), //set home page

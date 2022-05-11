@@ -39,7 +39,7 @@ Widget _buildUi(BuildContext context, double width) {
                 Expanded(
                   flex: ScreenHelper.isMobile(context) ? 0 : 2,
                   child: Image.asset(
-                    "assets/person_small.png",
+                    "assets/som_small.png",
                     width: 300.0,
                   ),
                 ),
@@ -56,7 +56,7 @@ Widget _buildUi(BuildContext context, double width) {
                         Text(
                           "Skills",
                           style: GoogleFonts.oswald(
-                            color: Colors.white,
+                            color: kDangerColor,
                             fontWeight: FontWeight.w900,
                             fontSize: 28.0,
                             height: 1.3,
@@ -92,7 +92,7 @@ Widget _buildUi(BuildContext context, double width) {
                                             alignment: Alignment.centerLeft,
                                             height: 38.0,
                                             child: Text(skill.skillName),
-                                            color: Colors.white,
+                                            color: kAuxColor,
                                           ),
                                         ),
                                         const SizedBox(
@@ -102,16 +102,14 @@ Widget _buildUi(BuildContext context, double width) {
                                           //remaining Blank part
                                           flex: 100 - skill.percentage,
                                           child: const Divider(
-                                            color: Colors.white,
+                                            color: kDangerColor,
                                           ),
                                         ),
                                         const SizedBox(
-                                          //vertical spacing 10
-                                          width: 10.0,
-                                        ),
+                                            width: 10.0), //vertical spacing 10
                                         Text("${skill.percentage}%",
                                             style: const TextStyle(
-                                              color: Colors.white,
+                                              color: kPrimaryColor,
                                               fontSize: 16.0,
                                               height: 1.5,
                                             ))
