@@ -6,7 +6,7 @@ import 'package:som_official/utils/globals.dart';
 import 'package:som_official/utils/screen_helper.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'component_item_lists/multiple_item_lists.dart';
+import 'views/multiple_item_lists.dart';
 
 class CvSection extends StatelessWidget {
   const CvSection({Key? key}) : super(key: key);

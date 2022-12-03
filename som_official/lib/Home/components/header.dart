@@ -7,7 +7,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/globals.dart';
 import '../../../utils/screen_helper.dart';
-import 'component_item_lists/header_items.dart';
+import 'views/header_items.dart';
 import 'header_logo.dart';
 
 class HeaderRow extends StatelessWidget {
@@ -28,7 +28,11 @@ class HeaderRow extends StatelessWidget {
                     cursor: SystemMouseCursors.click,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: kDangerColor,
+                        border: Border.all(
+                          style: BorderStyle.solid,
+                          color: kAuxColor,
+                        ),
+                        color: kPrimaryColor,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       padding: const EdgeInsets.symmetric(

@@ -10,7 +10,7 @@ import 'components/cv_section.dart';
 import 'components/education_section.dart';
 import 'components/footer.dart';
 import 'components/header.dart';
-import 'components/component_item_lists/header_items.dart';
+import 'components/views/header_items.dart';
 import 'components/skills_section.dart';
 // import 'components/testimonials_section.dart';
 // import 'components/work_advert2.dart';
@@ -35,7 +35,8 @@ class HomePage extends StatelessWidget {
           ? null
           : Drawer(
               child: SafeArea(
-                child: Padding(
+                child: Container(
+                  color: kPrimaryColor,
                   padding: const EdgeInsets.symmetric(
                     horizontal: 16.0,
                     vertical: 24.0,
@@ -48,7 +49,7 @@ class HomePage extends StatelessWidget {
                               cursor: SystemMouseCursors.click,
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: kDangerColor,
+                                  color: kSecondaryColor,
                                   borderRadius: BorderRadius.circular(8.0),
                                 ),
                                 padding: const EdgeInsets.symmetric(
@@ -58,7 +59,7 @@ class HomePage extends StatelessWidget {
                                   child: Text(
                                     headerItems[index].title,
                                     style: const TextStyle(
-                                      color: Colors.white,
+                                      color: kCaptionColor,
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -70,7 +71,7 @@ class HomePage extends StatelessWidget {
                               //If the item is not a button, we add a ListTile
                               title: Text(
                                 headerItems[index].title,
-                                style: const TextStyle(color: Colors.white),
+                                style: const TextStyle(color: kCaptionColor),
                               ),
                               onTap: headerItems[index].onTap,
                             );

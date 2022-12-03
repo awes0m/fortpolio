@@ -5,7 +5,7 @@ import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 
 import '../../utils/globals.dart';
-import 'component_item_lists/multiple_item_lists.dart';
+import 'views/multiple_item_lists.dart';
 
 class EducationSection extends StatelessWidget {
   const EducationSection({Key? key}) : super(key: key);

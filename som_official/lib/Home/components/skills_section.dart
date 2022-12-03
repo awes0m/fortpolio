@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 //imports
 import '../../utils/globals.dart';
-import 'component_item_lists/multiple_item_lists.dart';
+import 'views/multiple_item_lists.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 

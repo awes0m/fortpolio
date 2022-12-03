@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 //imports
 import '../../utils/globals.dart';
-import 'component_item_lists/carousel_items.dart';
+import 'views/carousel_items.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/screen_helper.dart';
 
