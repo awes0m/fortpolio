@@ -1,29 +1,25 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require("dotenv");
-const path = require('path')
+const dotenv = require('dotenv')
+const mongoose = require('mongoose')
 
-//App Config
-const app = express()
+const app = express();
+app.use(express.json());
+dotenv.config();
 const port = process.env.PORT || 5000
 
-//routes
-const authRoute = require('./middleware/auth')
-const postRoute = require('./middleware/post')
+
+//routers
+const authRoute = require('./routes/auth');
+
 
 //DB Config
-dotenv.config();
-
-//Database Connection 
-mongoose.connect(process.env.URL).then(console.log("Db Connected")).catch((err) =>console.log(err));
+mongoose.connect(process.env.URL).then(()=>console.log("Db Connected")).catch((e)=>console.log(e));
 
 //Middleware
-app.use(express.json());
-app.use('/api/blog',authRoute);
-app.use('api/blog/posts',postRoute);
+app.use("/api/auth",authRoute);
 
 
 //API Endpoints
 
 //Listener
-app.listen(port, () => console.log(`Listening on localhost: ${port}`))
+app.listen(port, () => console.log(`Listening on localhost:${port}`));
