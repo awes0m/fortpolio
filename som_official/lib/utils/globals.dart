@@ -10,6 +10,8 @@ class Globals {
   static GlobalKey educationKey = GlobalKey();
   static GlobalKey skillsKey = GlobalKey();
   static GlobalKey testimonialsKey = GlobalKey();
+  static GlobalKey<NavigatorState> blogNavigatorKey =
+      GlobalKey<NavigatorState>();
 }
 
 Future<void> scrollToSection(itemkey) async {
@@ -20,4 +22,5 @@ Future<void> scrollToSection(itemkey) async {
     duration: const Duration(milliseconds: 600),
     curve: Curves.slowMiddle,
   );
+  
 }
