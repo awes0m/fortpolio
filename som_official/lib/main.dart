@@ -1,12 +1,17 @@
 // imports
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import 'utils/constants.dart';
+import 'package:som_official/features/contact_form/contact_form.dart';
+
+import 'constants/constants.dart';
+import 'constants/globals.dart';
 import 'features/home/homepage.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -43,8 +48,10 @@ class MyApp extends StatelessWidget {
               ),
             ),
         initialRoute: HomePage.routeName,
+        navigatorKey: Globals.navigatorKey,
         routes: {
           HomePage.routeName: (context) => const HomePage(),
+          ContactFormPage.routeName: (context) => const ContactFormPage(),
         }
         //set home page
         );

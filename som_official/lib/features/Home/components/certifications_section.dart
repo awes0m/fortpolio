@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:som_official/utils/constants.dart';
-import 'package:som_official/utils/screen_helper.dart';
+
+import '../../../common/screen_helper.dart';
+import '../../../constants/constants.dart';
 
 final List<String> certificationsLogo = [
   "assets/brand1.png",

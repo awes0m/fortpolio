@@ -70,16 +70,16 @@ class Header extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {},
                       child: Row(
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "Learn More",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
                           ),
-                          const SizedBox(width: kDefaultPadding / 2),
-                          const Icon(
+                          SizedBox(width: kDefaultPadding / 2),
+                          Icon(
                             Icons.arrow_forward,
                             color: Colors.white,
                           ),

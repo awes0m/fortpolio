@@ -71,11 +71,11 @@ class Category extends StatelessWidget {
         child: Text.rich(
           TextSpan(
             text: title,
-            style: TextStyle(color: kDarkBlackColor),
+            style: const TextStyle(color: kDarkBlackColor),
             children: [
               TextSpan(
                 text: " ($numOfItems)",
-                style: TextStyle(color: kBodyTextColor),
+                style: const TextStyle(color: kBodyTextColor),
               ),
             ],
           ),

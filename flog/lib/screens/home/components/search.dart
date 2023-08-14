@@ -21,7 +21,7 @@ class Search extends StatelessWidget {
             padding: const EdgeInsets.all(kDefaultPadding / 2),
             child: SvgPicture.asset("assets/icons/feather_search.svg"),
           ),
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(kDefaultPadding / 2),
             ),

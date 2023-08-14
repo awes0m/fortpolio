@@ -2,9 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:som_official/utils/constants.dart';
-import 'package:som_official/utils/screen_helper.dart';
 
+import '../../../common/screen_helper.dart';
+import '../../../constants/constants.dart';
+import '../../../constants/globals.dart';
 import '../models/footer_item.dart';
 //imports
 
@@ -12,8 +13,8 @@ final List<FooterItem> footerItems = [
   FooterItem(
     iconPath: "assets/mappin.png",
     title: 'ADDRESS',
-    text1: '999 Main St',
-    text2: 'Jl. Raya Kedungwuni No.1',
+    text1: '2p 1b Satkari Mitra Lane',
+    text2: 'Bagmari-Kolkata',
   ),
   FooterItem(
     iconPath: "assets/phone.png",
@@ -55,6 +56,7 @@ Widget _buildUI(BuildContext context, double width) {
   return Center(
     child: LayoutBuilder(builder: (context, constraints) {
       return ResponsiveWrapper(
+        key: Globals.contactFooter,
         maxWidth: width,
         minWidth: width,
         defaultScale: false,

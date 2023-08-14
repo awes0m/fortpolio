@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import '../../../../utils/constants.dart';
-import '../../../../utils/screen_helper.dart';
 
-import '../../../utils/globals.dart';
-import 'views/multiple_item_lists.dart';
+import '../../../common/screen_helper.dart';
+import '../../../constants/constants.dart';
+import '../../../constants/globals.dart';
+import 'items/multiple_item_lists.dart';
 
 class EducationSection extends StatelessWidget {
   const EducationSection({Key? key}) : super(key: key);
@@ -51,7 +51,7 @@ Widget _buildUi(BuildContext context, double width) {
               Container(
                 constraints: const BoxConstraints(maxWidth: 300.0),
                 child: const Text(
-                    "A list of my Alma Maters.\nI completed bachelor's degree in Mechanical Engineering from the KIIT University, India.",
+                    "Educated in Sciences for foundation, holding a degree in Engineering that has equipped me with a structured and analytical mindset,deep curiosity and a rigorous approach to problem-solving",
                     style: TextStyle(
                       color: kDangerColor,
                       height: 1.5,

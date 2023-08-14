@@ -2,11 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+
+import '../../../common/screen_helper.dart';
+import '../../../constants/constants.dart';
+import '../../../constants/globals.dart';
+import 'items/multiple_item_lists.dart';
 //imports
-import '../../../utils/globals.dart';
-import 'views/multiple_item_lists.dart';
-import '../../../../utils/constants.dart';
-import '../../../../utils/screen_helper.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({Key? key}) : super(key: key);

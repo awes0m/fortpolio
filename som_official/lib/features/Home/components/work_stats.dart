@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:som_official/utils/constants.dart';
-import 'package:som_official/utils/screen_helper.dart';
 
+import '../../../common/screen_helper.dart';
+import '../../../constants/constants.dart';
 import '../models/stats.dart';
 
 List<Stat> stats = [
