@@ -1,24 +1,24 @@
 //dependencies
 import 'package:flutter/material.dart';
-import 'package:som_official/features/home/components/workex_section.dart';
 
 //imports
 import '../../common/screen_helper.dart';
 import '../../constants/constants.dart';
 import '../../constants/globals.dart';
-import 'components/sec2_carousel.dart';
-import 'components/certifications_section.dart';
-import 'components/sec3_cv_section.dart';
-import 'components/education_section.dart';
+import 'components/sec1_carousel.dart';
+import 'components/sec10_certifications_section.dart';
+import 'components/sec2_cv_section.dart';
+import 'components/sec7_education_section.dart';
 import 'components/footer.dart';
-import 'components/sec1_header.dart';
-import 'components/skills_section.dart';
-import 'components/testimonials_section.dart';
+import 'components/header.dart';
+import 'components/sec8_skills_section.dart';
+import 'components/sec11_testimonials_section.dart';
 import 'components/sec5_game_advert2.dart';
 import 'components/sec4_app_advert1.dart';
 
 import 'components/items/header_items.dart';
-import 'components/work_stats.dart';
+import 'components/sec6_work_stats.dart';
+import 'components/sec3_workex_section.dart';
 
 /// The main Page containing all the sections of the resume
 class HomePage extends StatelessWidget {
@@ -52,11 +52,13 @@ class HomePage extends StatelessWidget {
                     Carousel(),
                     SizedBox(height: 20.0), //WhiteSpace 20
                     CvSection(),
-                    AppAdvert1(),
-                    // SizedBox(height: 70.0), //White space 70
-                    GameAdvert2(),
                     SizedBox(height: 70.0), //White space 70
                     WorkStats(),
+                    SizedBox(height: 40.0), //White space 40
+                    AppAdvert1(),
+                    SizedBox(height: 40.0), //White space 40
+                    GameAdvert2(),
+
                     SizedBox(height: 70.0), //White space 50
                     EducationSection(),
                     SizedBox(height: 50.0), //White space 50

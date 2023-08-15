@@ -6,6 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
 import '../../../constants/globals.dart';
+import '../../../utils/utils.dart';
 import 'items/carousel_items.dart';
 //imports
 
@@ -111,7 +112,7 @@ Widget _buildTablet(BuildContext context, Widget text, Widget image) {
 Widget _buildMobile(BuildContext context, Widget text, Widget image) {
   return Container(
     constraints: BoxConstraints(
-      maxWidth: getMobileMaxWidth(context),
+      maxWidth: getMaxWidth(context),
     ),
     width: double.infinity,
     child: text,

@@ -3,6 +3,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
+import '../../../utils/utils.dart';
 
 final List<String> certificationsLogo = [
   "assets/brand1.png",
@@ -20,7 +21,7 @@ class CertificationsSection extends StatelessWidget {
     return ScreenHelper(
       desktop: _buildUi(context, kDesktopMaxWidth),
       tablet: _buildUi(context, kTabletMaxWidth),
-      mobile: _buildUi(context, getMobileMaxWidth(context)),
+      mobile: _buildUi(context, getMaxWidth(context)),
     );
   }
 }

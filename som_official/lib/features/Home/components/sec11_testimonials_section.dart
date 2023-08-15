@@ -6,6 +6,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
 import '../../../constants/globals.dart';
+import '../../../utils/utils.dart';
 import '../models/testimonial.dart';
 
 final List<Testimonial> testimonials = [
@@ -32,7 +33,7 @@ class Testimonials extends StatelessWidget {
       child: ScreenHelper(
         desktop: _buildUI(context, kDesktopMaxWidth),
         tablet: _buildUI(context, kTabletMaxWidth),
-        mobile: _buildUI(context, getMobileMaxWidth(context)),
+        mobile: _buildUI(context, getMaxWidth(context)),
       ),
     );
   }

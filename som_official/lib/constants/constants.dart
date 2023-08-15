@@ -16,11 +16,3 @@ const Color kAuxColor = Colors.black12;
 
 const double kDesktopMaxWidth = 1000;
 const double kTabletMaxWidth = 760.0;
-double getMobileMaxWidth(BuildContext context) {
-  return MediaQuery.of(context).size.width * .8;
-}
-
-appSnackBar(BuildContext context, String text) {
-  return ScaffoldMessenger.of(context)
-      .showSnackBar(SnackBar(content: Text(text)));
-}

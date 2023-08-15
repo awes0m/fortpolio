@@ -28,6 +28,10 @@ List<HeaderItem> headerItems = [
     title: 'Skills',
     onTap: () => scrollToSection(Globals.skillsKey),
   ),
+  HeaderItem(
+    title: 'Play free game',
+    onTap: () => scrollToSection(Globals.workadvert2Key),
+  ),
 
   // Contact form
   HeaderItem(

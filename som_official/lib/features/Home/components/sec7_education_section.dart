@@ -5,6 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
 import '../../../constants/globals.dart';
+import '../../../utils/utils.dart';
 import 'items/multiple_item_lists.dart';
 
 class EducationSection extends StatelessWidget {
@@ -17,7 +18,7 @@ class EducationSection extends StatelessWidget {
       child: ScreenHelper(
         desktop: _buildUi(context, kDesktopMaxWidth),
         tablet: _buildUi(context, kTabletMaxWidth),
-        mobile: _buildUi(context, getMobileMaxWidth(context)),
+        mobile: _buildUi(context, getMaxWidth(context)),
       ),
     );
   }

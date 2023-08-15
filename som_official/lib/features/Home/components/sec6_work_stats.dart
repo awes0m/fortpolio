@@ -4,6 +4,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
+import '../../../utils/utils.dart';
 import '../models/stats.dart';
 
 List<Stat> stats = [
@@ -23,7 +24,7 @@ class WorkStats extends StatelessWidget {
       child: ScreenHelper(
         desktop: _buildUI(context, kDesktopMaxWidth),
         tablet: _buildUI(context, kTabletMaxWidth),
-        mobile: _buildUI(context, getMobileMaxWidth(context)),
+        mobile: _buildUI(context, getMaxWidth(context)),
       ),
     );
   }

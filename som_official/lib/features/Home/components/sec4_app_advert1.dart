@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:som_official/features/Home/components/commons/bordered_text.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
+import '../../../common/bordered_text.dart';
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
 import '../../../constants/globals.dart';
+import '../../../utils/utils.dart';
 
 class AppAdvert1 extends StatelessWidget {
   const AppAdvert1({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class AppAdvert1 extends StatelessWidget {
       child: ScreenHelper(
         desktop: _buildUI(context, kDesktopMaxWidth),
         tablet: _buildUI(context, kTabletMaxWidth),
-        mobile: _buildUI(context, getMobileMaxWidth(context)),
+        mobile: _buildUI(context, getMaxWidth(context)),
       ),
     );
   }
@@ -41,8 +43,9 @@ class AppAdvert1 extends StatelessWidget {
                 child: Image.asset(
                   'assets/winapps.png',
                   //set width to 0 to avoid Render errors in smaller screens
-                  width: constraints.maxWidth > 700 ? null : 350.0,
-                  fit: BoxFit.fill,
+                  width: constraints.maxWidth > 700 ? null : 300.0,
+                  height: getMaxheight(context),
+                  fit: BoxFit.contain,
                 ),
               ),
               Expanded(
@@ -71,13 +74,14 @@ class AppAdvert1 extends StatelessWidget {
                       height: 10.0,
                     ),
                     Text(
-                      'A travel shop app that helps you to find the best deals for your next trip.Lorem ipsum quatro tredemill , this is getting weird as i cant think of anything to write but i think this should be pretty long enough to be readable',
+                      'Try out this Virtual Drum Set with adjustable RPM, beats . Can save and load beats created \nor\n Try out this Virual Piano with all the notes and tones in placed systematically and can be played with any ordinary PC Keyboard.',
                       style: GoogleFonts.oswald(
                         color: kCaptionColor,
                         fontSize: 15.0,
                         height: 1.5,
                       ),
                     ),
+                    const Text('\n(Avaliable for windows only)'),
                     const SizedBox(
                       //White space 25
                       height: 25.0,
@@ -95,10 +99,11 @@ class AppAdvert1 extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 28.0),
                               child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () => launchUrlString(
+                                      'https://awes0m.itch.io/'),
                                   child: const Center(
                                     child: Text(
-                                      'Explore More',
+                                      'Download from Itch.io',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 13.0,
