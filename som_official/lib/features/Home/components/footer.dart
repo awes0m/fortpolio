@@ -2,18 +2,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
-import '../models/footer_item.dart';
+import '../../../models/footer_item.dart';
 //imports
 
 final List<FooterItem> footerItems = [
   FooterItem(
     iconPath: "assets/mappin.png",
-    title: 'ADDRESS',
-    text1: '2p 1b Satkari Mitra Lane',
-    text2: 'Bagmari-Kolkata',
+    title: 'SOCIAL',
+    text1: 'facebook.com/awe.s0m',
+    text2: 'twitter.com/_awe_som_',
   ),
   FooterItem(
     iconPath: "assets/phone.png",
@@ -157,7 +158,7 @@ Widget _buildUI(BuildContext context, double width) {
                     ),
                     GestureDetector(
                       onTap: () {
-                        //TODO: add link to facebook
+                        launchUrlString('https://www.facebook.com/awe.s0m');
                       },
                       //privacy policy
                       child: const MouseRegion(

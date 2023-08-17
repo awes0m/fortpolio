@@ -67,14 +67,14 @@ Widget _buildUi(BuildContext context, double width) {
                           //vertical spacing 10
                           height: 10,
                         ),
-                        const Text(
-                          "This is all the skills listed below ,more will be added in due time",
-                          style: TextStyle(
-                            color: kCaptionColor,
-                            fontSize: 16.0,
-                            height: 1.5,
-                          ),
-                        ),
+                        // const Text(
+                        //   "This is all the skills listed below ,more will be added in due time",
+                        //   style: TextStyle(
+                        //     color: kCaptionColor,
+                        //     fontSize: 16.0,
+                        //     height: 1.5,
+                        //   ),
+                        // ),
                         const SizedBox(
                           //vertical spacing 15
                           height: 15,
@@ -93,17 +93,18 @@ Widget _buildUi(BuildContext context, double width) {
                                             alignment: Alignment.centerLeft,
                                             height: 38.0,
                                             child: Text(skill.skillName),
-                                            color: kAuxColor,
+                                            color: Colors.white,
                                           ),
                                         ),
-                                        const SizedBox(
-                                          width: 10.0,
-                                        ),
+                                        // const SizedBox(
+                                        //   width: 10.0,
+                                        // ),
                                         Expanded(
                                           //remaining Blank part
-                                          flex: skill.percentage - 100,
-                                          child: const Divider(
-                                            color: kDangerColor,
+                                          flex: 100 - skill.percentage,
+                                          child: Container(
+                                            height: 38.0,
+                                            color: kPrimaryColor,
                                           ),
                                         ),
                                         const SizedBox(

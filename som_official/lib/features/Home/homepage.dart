@@ -11,7 +11,6 @@ import 'components/sec7_education_section.dart';
 import 'components/footer.dart';
 import 'components/header.dart';
 import 'components/sec8_skills_section.dart';
-import 'components/sec11_testimonials_section.dart';
 import 'components/sec5_game_advert2.dart';
 import 'components/sec4_app_advert1.dart';
 
@@ -52,13 +51,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(height: 20.0), //WhiteSpace 20
                     CvSection(),
                     SizedBox(height: 70.0), //White space 70
-                    WorkStats(),
-                    SizedBox(height: 40.0), //White space 40
-                    AppAdvert1(),
-                    SizedBox(height: 40.0), //White space 40
-                    GameAdvert2(),
 
-                    SizedBox(height: 70.0), //White space 50
                     EducationSection(),
                     SizedBox(height: 50.0), //White space 50
                     SkillsSection(),
@@ -66,8 +59,14 @@ class HomePage extends StatelessWidget {
                     WorkexSection(),
                     SizedBox(height: 25.0), //White space 25
                     CertificationsSection(),
-                    SizedBox(height: 70.0), //White space 50
-                    Testimonials(),
+                    AppAdvert1(),
+                    SizedBox(height: 40.0), //White space 40
+                    GameAdvert2(),
+
+                    SizedBox(height: 70.0), //White space 50 //White space 50
+                    // Testimonials(),
+                    WorkStats(),
+
                     Footer(),
                     SizedBox(height: 5.0), //White space 50
                   ],

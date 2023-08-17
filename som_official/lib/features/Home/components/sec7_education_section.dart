@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
@@ -101,7 +102,8 @@ Widget _buildUi(BuildContext context, double width) {
                                   cursor: SystemMouseCursors.click,
                                   child: GestureDetector(
                                       onTap: () {
-                                        // TODO: Link to website
+                                        launchUrlString(
+                                            'https://${education.linkName}');
                                       },
                                       child: Text(
                                         education.linkName,

@@ -52,7 +52,7 @@ Widget _buildUi(BuildContext context, double width) {
               Container(
                 constraints: const BoxConstraints(maxWidth: 300.0),
                 child: const Text(
-                    " Started my First Job as a Graphics Designer for a small company.I worked on designing and developing websites and web applications as an Intern.\nBefore finally joining Wipro Technologies as Security Analyst",
+                    " Began my career as a Graphics Designer for a small company, focusing on web design and development during my internship. \n\nLater, I transitioned to Wipro Technologies as a Security Analyst",
                     style: TextStyle(
                       color: kDangerColor,
                       height: 1.5,

@@ -5,7 +5,7 @@ import 'package:responsive_framework/responsive_framework.dart';
 import '../../../common/common.dart';
 import '../../../constants/constants.dart';
 import '../../../utils/utils.dart';
-import '../models/stats.dart';
+import '../../../models/stats.dart';
 
 List<Stat> stats = [
   Stat(count: "3", text: "Companies"),

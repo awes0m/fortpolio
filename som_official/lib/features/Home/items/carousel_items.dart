@@ -9,7 +9,7 @@ import '../../../constants/constants.dart';
 // ignore: unnecessary_import
 import '../../../constants/globals.dart';
 import '../../contact_form/contact_form.dart';
-import '../models/carousel_item_model.dart';
+import '../../../models/carousel_item_model.dart';
 
 List<CarouselItemModel> carouselItems = List.generate(
   5,

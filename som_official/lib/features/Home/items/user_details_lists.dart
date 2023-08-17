@@ -1,8 +1,8 @@
-import '../models/design_process.dart';
-import '../models/education.dart';
-import '../models/skills.dart';
-import '../models/testimonial.dart';
-import '../models/workex.dart';
+import '../../../models/design_process.dart';
+import '../../../models/education.dart';
+import '../../../models/skills.dart';
+import '../../../models/testimonial.dart';
+import '../../../models/workex.dart';
 
 /// cv section components
 final List<DesignProcess> designProcesses = [
@@ -36,7 +36,7 @@ final List<DesignProcess> designProcesses = [
 final List<Education> educationList = [
   Education(
     description:
-        "KIIT UNIVERSITY\nKalinga Institute of Industrial Technology, Bhubaneswar, India",
+        "Kalinga Institute of Industrial Technology,\nBhubaneswar, India",
     linkName: "www.kiit.ac.in",
     period: "2015-2019",
   ),
@@ -47,7 +47,7 @@ final List<Education> educationList = [
   ),
   Education(
     description: "ST. XAVIERS'S SCHOOL,\nDurgapur,West Bengal,India",
-    linkName: "www.stxaviersdgp.com",
+    linkName: "sxsdgp.edu.in",
     period: "2012-2008",
   ),
 ];
