@@ -7,7 +7,6 @@ import 'package:responsive_framework/responsive_framework.dart';
 import 'package:som_official/features/contact_form/contact_form.dart';
 
 import 'constants/constants.dart';
-import 'constants/globals.dart';
 import 'features/home/homepage.dart';
 
 Future<void> main() async {

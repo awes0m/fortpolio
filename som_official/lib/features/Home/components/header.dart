@@ -5,11 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 //imports
 
-import '../../../common/header_logo.dart';
-import '../../../common/screen_helper.dart';
+import '../../../common/common.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
-import 'items/header_items.dart';
+import '../items/header_items.dart';
 
 class HeaderRow extends StatelessWidget {
   /// header menu widget

@@ -3,25 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import '../../../common/screen_helper.dart';
+import '../../../common/common.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
 import '../../../utils/utils.dart';
-import '../models/testimonial.dart';
-
-final List<Testimonial> testimonials = [
-  Testimonial(
-    personname: 'jENNY DOE',
-    profilephoto: 'assets/female.png',
-    text: "Lovely app, I'm using it everyday. I'm a big fan of it.",
-    occupation: "PRODUCT DESIGNER",
-  ),
-  Testimonial(
-      personname: 'KEN WILLIAMS',
-      profilephoto: 'assets/male.png',
-      text: "Lovely app, I'm using it everyday. I'm a big fan of it.",
-      occupation: "PRODUCT DESIGNER"),
-];
+import '../items/user_details_lists.dart';
 
 class Testimonials extends StatelessWidget {
   const Testimonials({Key? key}) : super(key: key);

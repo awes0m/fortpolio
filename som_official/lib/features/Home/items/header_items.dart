@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../constants/globals.dart';
-import '../../../contact_form/contact_form.dart';
-import '../../models/header_items.dart';
+import '../../../constants/globals.dart';
+import '../../contact_form/contact_form.dart';
+import '../models/header_items.dart';
 
 List<HeaderItem> headerItems = [
   /// Home

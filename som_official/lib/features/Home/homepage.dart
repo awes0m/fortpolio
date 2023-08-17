@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 //imports
 import '../../common/screen_helper.dart';
 import '../../constants/constants.dart';
-import '../../constants/globals.dart';
 import 'components/sec1_carousel.dart';
 import 'components/sec10_certifications_section.dart';
 import 'components/sec2_cv_section.dart';
@@ -16,7 +15,7 @@ import 'components/sec11_testimonials_section.dart';
 import 'components/sec5_game_advert2.dart';
 import 'components/sec4_app_advert1.dart';
 
-import 'components/items/header_items.dart';
+import 'items/header_items.dart';
 import 'components/sec6_work_stats.dart';
 import 'components/sec3_workex_section.dart';
 

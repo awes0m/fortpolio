@@ -3,10 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../../common/bordered_text.dart';
-import '../../../common/screen_helper.dart';
+import '../../../common/common.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
 import '../../../utils/utils.dart';
 
 class AppAdvert1 extends StatelessWidget {

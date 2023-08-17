@@ -5,9 +5,8 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
 import '../../../utils/utils.dart';
-import 'items/carousel_items.dart';
+import '../items/carousel_items.dart';
 //imports
 
 class Carousel extends StatelessWidget {

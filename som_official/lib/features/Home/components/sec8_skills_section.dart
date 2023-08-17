@@ -3,11 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-import '../../../common/screen_helper.dart';
+import '../../../common/common.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
 import '../../../utils/utils.dart';
-import 'items/multiple_item_lists.dart';
+import '../items/user_details_lists.dart';
 //imports
 
 class SkillsSection extends StatelessWidget {

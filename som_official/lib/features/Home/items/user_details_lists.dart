@@ -1,7 +1,8 @@
-import '../../models/design_process.dart';
-import '../../models/education.dart';
-import '../../models/skills.dart';
-import '../../models/workex.dart';
+import '../models/design_process.dart';
+import '../models/education.dart';
+import '../models/skills.dart';
+import '../models/testimonial.dart';
+import '../models/workex.dart';
 
 /// cv section components
 final List<DesignProcess> designProcesses = [
@@ -71,4 +72,19 @@ final List<Workex> workexList = [
     linkName: "www.apisod.com",
     period: "2017-Present",
   ),
+];
+
+//Testimonials
+final List<Testimonial> testimonials = [
+  Testimonial(
+    personname: 'jENNY DOE',
+    profilephoto: 'assets/female.png',
+    text: "Lovely app, I'm using it everyday. I'm a big fan of it.",
+    occupation: "PRODUCT DESIGNER",
+  ),
+  Testimonial(
+      personname: 'KEN WILLIAMS',
+      profilephoto: 'assets/male.png',
+      text: "Lovely app, I'm using it everyday. I'm a big fan of it.",
+      occupation: "PRODUCT DESIGNER"),
 ];

@@ -5,7 +5,6 @@ import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
 import '../models/footer_item.dart';
 //imports
 

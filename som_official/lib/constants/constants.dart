@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+export './asset_constants.dart';
+export './globals.dart';
 
 const String cvDownloadUrl =
     "https://drive.google.com/uc?export=download&id=1guzkkKLuTn4C3OQ6bDziQYSMA_oG-vaW";

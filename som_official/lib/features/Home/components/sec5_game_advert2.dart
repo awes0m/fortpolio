@@ -1,14 +1,10 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-//dependencies
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../../common/screen_helper.dart';
+import '../../../common/common.dart';
 import '../../../constants/constants.dart';
-import '../../../constants/globals.dart';
-import '../../../common/bordered_text.dart';
 import '../../../utils/utils.dart';
 
 class GameAdvert2 extends StatelessWidget {
