@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TitleBar extends StatelessWidget {
   const TitleBar(
@@ -20,8 +21,7 @@ class TitleBar extends StatelessWidget {
       alignment: Alignment.topLeft,
       child: Text(
         title,
-        style: TextStyle(
-            fontFamily: 'SourceCodePro',
+        style: GoogleFonts.dmMono(
             letterSpacing: 10.5,
             color: Theme.of(context).primaryColorLight,
             fontSize: 20),

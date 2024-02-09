@@ -22,37 +22,37 @@ class NavBar extends StatelessWidget {
           UnderlinedButton(
               context: context,
               tabNumber: 0,
-              btnNumber: ' 00. ',
+              btnNumber: ' _/. ',
               btnName: 'Home'),
           UnderlinedButton(
               context: context,
               tabNumber: 1,
-              btnNumber: ' 01. ',
+              btnNumber: ' _1. ',
               btnName: 'What I Do'),
           UnderlinedButton(
               context: context,
               tabNumber: 2,
-              btnNumber: ' 02. ',
+              btnNumber: ' _2. ',
               btnName: 'Education'),
           UnderlinedButton(
               context: context,
               tabNumber: 3,
-              btnNumber: ' 03. ',
+              btnNumber: ' _3. ',
               btnName: 'Experience'),
           UnderlinedButton(
               context: context,
               tabNumber: 4,
-              btnNumber: ' 04. ',
+              btnNumber: ' _4. ',
               btnName: 'Projects'),
           UnderlinedButton(
               context: context,
               tabNumber: 5,
-              btnNumber: ' 05. ',
-              btnName: 'Achievements'),
+              btnNumber: ' _5. ',
+              btnName: 'Certifications'),
           UnderlinedButton(
               context: context,
               tabNumber: 6,
-              btnNumber: ' 06. ',
+              btnNumber: ' _6. ',
               btnName: 'Contact Me'),
           Visibility(
             visible: isDarkModeBtnVisible,

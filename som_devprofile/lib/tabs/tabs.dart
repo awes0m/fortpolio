@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'achievements.dart';
+import 'certifications.dart';
 import 'contact_me.dart';
 import 'education.dart';
 import 'experience.dart';
@@ -8,7 +8,7 @@ import 'home.dart';
 import 'projects.dart';
 import 'what_i_do.dart';
 
-export 'achievements.dart';
+export 'certifications.dart';
 export 'contact_me.dart';
 export 'education.dart';
 export 'experience.dart';
@@ -23,6 +23,6 @@ List<Widget> webHeaderList = [
   Education(),
   Experience(),
   Projects(),
-  Achievements(),
+  Certifications(),
   const ContactMe(),
 ];

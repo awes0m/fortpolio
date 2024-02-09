@@ -7,7 +7,7 @@
         "Senior Cybersecurity/Network Administrator.",
         "Flutter Developer."
     ],
-    "resume_download_link": "https://docs.google.com/document/d/15T64f6XCPKDaJX7CUFDIqly-H4PcudLTWDlKGxb9IvQ/edit?usp=sharing/export?format=pdf",
+    "resume_download_link": "https://drive.google.com/file/d/1MI1NpnKTKZQ0Yt2TFxJ2WGJ7i9vPC-8p/view?usp=sharing",
     "social_media": {
         "1": [
             "https://github.com/awes0m",
@@ -37,10 +37,10 @@
     "contact_me": {
         "location": "Durgapur,Kolkata, India",
         "open_for_opportunities": "Yes",
-        "picture": "picture.png"
+        "picture": "personal.png"
     },
     "about": "A passionate Cybersecurity Professional 🚀 | Hobby Coder 📝 | Maintainer 👷",
-    "bio": "Sophomore CS Engineering student. I spend my leisure time contributing to open source projects and browsing Stack Overflow. I've hands-on experience in working on several projects that use Python, Node.js, Flutter, Java, etc. Most of my projects are released as open-source on GitHub.",
+    "bio": "Dedicated Cybersecurity Analyst and Cloud-Native Architect with a background in network security (Firewalls and IPS), SIEM (Security Information and Event Management), Vulnerability Management, Email Security, and Backend Development. Proficient in a wide range of programming languages.\n\nKnown for my unwavering enthusiasm, I am driven by a relentless pursuit of challenges and a commitment to continuous innovation.",
     "what_i_do": {
         "tools": [
             "flutter.png",
@@ -53,10 +53,12 @@
             "git.png"
         ],
         "proficiency": [
-            "Flutter--50",
-            "C/C++/Java/Python--60",
-            "GNU/Linux--30",
-            "Git--65"
+            "Vulnerability Management--90",
+            "Next Generation Firewalls--70",
+            "Security Complince Posture Management--70",
+            "Python/JavaScript--70",
+            "GNU/Linux--50",
+            "Git--60"
         ]
     },
     "education": {
@@ -110,80 +112,80 @@
     },
     "projects": {
         "1": {
-            "name": "Regalia '22 Backend",
-            "tech_stack_used": "FastAPI and MongoDB (using Python)",
-            "description": "Backend of Regalia '22, RCCIIT's cultural fest. Handled total entries for 1.2K+ attendees on both the event days each. Also handled on-spot registrations (including sending passes through email using MAILGUN API) and free entries, without encountering a single production bug.",
-            "general_or_github_link": "https://github.com/danger-ahead/regalia-2022-backend"
+            "name": "Drum-ru 😎",
+            "tech_stack_used": "Pygame(using Python)",
+            "description": "Windows(EXE) DOWNLOAD available! \nFull Drumpad with customizable beats and Recording ,  ",
+            "general_or_github_link": "https://github.com/awes0m/pybeats"
         },
         "2": {
-            "name": "TechTrix '22 Backend",
-            "tech_stack_used": "FastAPI and MongoDB (using Python)",
-            "description": "Made the backend of TechTrix '22, RCCIIT's tech fest. Handled 435+ participants, 60+ coordinators, and 560+ event registrations, without encountering a single production bug.",
-            "general_or_github_link": "https://github.com/danger-ahead/techtrix22-backend"
+            "name": "Pyiano",
+            "tech_stack_used": "Flutter",
+            "description": "Windows(EXE) DOWNLOAD available! \nFull Piano programable to be played ccuratly with Computer keyboard ,",
+            "general_or_github_link": "https://github.com/awes0m/pyiano"
         },
         "3": {
-            "name": "Calculator",
-            "tech_stack_used": "Flutter",
-            "description": "Calculator app based on Soft UI (neumorphism), having simple and advanced modes. Also has a history section to save previously performed operations (using FLUTTER SQLITE). Supports 3 theme modes - system default, light and dark. State management approach used - RIVERPOD. PUBLISHED ON F-DROID.",
-            "general_or_github_link": "https://github.com/belelaritra/Neumorphic_Calculator"
+            "name": "Godly-Networking-Scripts",
+            "tech_stack_used": "Python, PowerShell",
+            "description": "As the name suggest all networking basic automations, Handy and easy to use for a professional , uses basic libraries no additinal requirements",
+            "general_or_github_link": "https://github.com/awes0m/Godly-Networking-Scripts"
         },
         "4": {
-            "name": "flutter_dev_folio",
+            "name": "fotoshop",
             "tech_stack_used": "Flutter",
-            "description": "Minimal, Beautiful and responsive portfolio site template.",
-            "general_or_github_link": "https://github.com/danger-ahead/flutter_dev_folio"
+            "description": "Android(APK) DOWNLOAD available!, \nA Photo and video editing application complety offline and free with advanced features and text editing",
+            "general_or_github_link": "https://github.com/awes0m/fotoshop"
         },
         "5": {
-            "name": "roBOT - Discord bot",
-            "tech_stack_used": "Python, MongoDB, REST APIs",
-            "description": "Bot with administrative commands (for kick, ban, mute, etc) and other fun commands (for memes, movies, jokes, etc).",
-            "general_or_github_link": "https://github.com/danger-ahead/roBOT"
+            "name": "Browser Based Games",
+            "tech_stack_used": "HTML, CS, JS",
+            "description": "Multiple browser based offline games",
+            "general_or_github_link": "https://github.com/awes0m/jsTgames"
         },
         "6": {
-            "name": "cinephilic",
-            "tech_stack_used": "HTML, CS, JS",
-            "description": "A chrome extension for showing the current trending movies in new tab.",
-            "general_or_github_link": "https://github.com/quasar-rcciit/cinephilic"
+            "name": "flappy_som",
+            "tech_stack_used": "Flutter ",
+            "description": "The game is a side-scroller where the player controls a bird, attempting to fly between columns of green pipes without hitting them..",
+            "general_or_github_link": "https://github.com/awes0m/glutter-fames/tree/main/flappy_som"
         },
         "7": {
-            "name": "Dictionary",
-            "tech_stack_used": "Flutter, SQLite, REST APIs",
-            "description": "Multi-language dictionary app with support for audio pronunciation (English only).",
-            "general_or_github_link": "https://github.com/danger-ahead/flutter_dictionary"
+            "name": "Sliding Puzzle- Neumorphism",
+            "tech_stack_used": "Flutter",
+            "description": "A sliding puzzle, sliding block puzzle, or sliding tile puzzle is a combination puzzle that challenges a player to slide (frequently flat) pieces along certain routes (usually on a board) to establish a certain end-configuration.",
+            "general_or_github_link": "https://github.com/awes0m/glutter-fames/tree/main/sliderr"
         },
         "8":{
-            "name": "Note",
-            "tech_stack_used": "JAVA, MySQL",
-            "description": "Simple terminal based Note Taking Application.",
-            "general_or_github_link": "https://github.com/danger-ahead/Note"
+            "name": "flu_ttt_er_tictactoe",
+            "tech_stack_used": "Flutter, Node(JavaScript)",
+            "description": "Tic Tac Toe game. With Realtime Multiplier using Node Js and Socket IO library",
+            "general_or_github_link": "https://github.com/awes0m/flu_ttt_er_tictactoe"
         },
         "9":{
-            "name": "Enigma-tic-cryption",
-            "tech_stack_used": "C++",
-            "description": "Follows the exact encryption method used by the enigma. Has multiple modes for setting different rotors.",
-            "general_or_github_link": "https://github.com/danger-ahead/enigma-tic-cryption"
+            "name": "apisod-crm",
+            "tech_stack_used": "Python(Django),HTML,CSS",
+            "description": "A django based customer relationship portal",
+            "general_or_github_link": "https://github.com/awes0m/apisod-crm"
         }
     },
     "achievements": {
         "1": {
-            "description": "Worked in a team (Quasar) at HackNPitch’21 (hackathon organised by JU E-Cell ) and ranked in the top 6 (earned the special mention tag) among 50+ other teams across India.",
-            "link": "https://www.linkedin.com/posts/juecell_hacknpitch-include-hackathon-activity-6849231722333249536-qqw2"
+            "description": "AWS Solutions Architect-Associate.",
+            "link": "https://www.linkedin.com/feed/update/urn:li:activity:7047605033579761664/"
         },
         "2": {
-            "description": "Won Filecoin track prize from Filecoin for the best use of Filecoin and/or IPFS in a hackathon project (worth Rs. 20,000).",
-            "link": "https://www.linkedin.com/posts/shourya-shikhar_dapp-filecoin-decentralized-activity-6889903951555235840-FuLM"
+            "description": "Qualys Certified Specialist-Vulnerability Management",
+            "link": "https://www.linkedin.com/posts/som-subhra_qualys-threat-and-vulnerabilities-management-activity-6787084303672066048-OZE0?utm_source=share&utm_medium=member_desktop"
         },
         "3": {
-            "description": "Have 600+ reputation points in Stack Overflow.",
-            "link": "https://stackoverflow.com/users/10951873/shourya-shikhar"
+            "description": "Microsoft AZ-900 & SC-900",
+            "link": "https://www.linkedin.com/posts/som-subhra_microsoft-certified-azure-fundamentals-was-activity-6849381691274891264-2uFL?utm_source=share&utm_medium=member_desktop"
         },
         "4": {
-            "description": "Completed 30 Days of Google Cloud '21.\n- Completed Cloud Engineering Track\n- Completed Data Science & Machine Learning Track",
-            "link": "https://www.qwiklabs.com/public_profiles/d317f0a6-63b7-4c9f-be77-066e75ba3c6a"
+            "description": "Armis IOT Security Trained",
+            "link": "https://www.linkedin.com/posts/som-subhra_iot-device-security-armis-platform-activity-6787483036272353280-3XGx?utm_source=share&utm_medium=member_desktop"
         },
         "5": {
-            "description": "Completed Hacktoberfest '21 with 6 merged PRs.",
-            "link": "https://www.linkedin.com/posts/shourya-shikhar_hacktoberfest2021-hacktoberfest-opensource-activity-6857565719031361536-OpX8"
+            "description": "Project Management Foundations: Integration! .",
+            "link": "https://www.linkedin.com/posts/som-subhra_certificate-of-completion-activity-7158077018125856768-WYZJ?utm_source=share&utm_medium=member_desktop"
         }
     }
 }

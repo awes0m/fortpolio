@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomText extends StatelessWidget {
   const CustomText(
@@ -18,8 +19,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
         textAlign: isTextAlignCenter ? TextAlign.center : TextAlign.left,
-        style: TextStyle(
-          fontFamily: 'Montserrat',
+        style: GoogleFonts.ubuntuCondensed(
           letterSpacing: 2,
           fontSize: fontSize,
           color: color,

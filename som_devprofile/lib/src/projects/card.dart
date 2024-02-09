@@ -30,6 +30,7 @@ class _ProjectsCardState extends State<ProjectsCard> {
     final double width = MediaQuery.of(context).size.width;
     return AnimatedContainer(
       decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
         boxShadow: [
           BoxShadow(
             color: isHover ? Colors.black12 : Colors.black45,

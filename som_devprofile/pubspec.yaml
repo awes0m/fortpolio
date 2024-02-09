@@ -39,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^1.2.0
   scrollable_positioned_list: ^0.3.8
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -94,17 +95,7 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-      - family: SourceCodePro
-        fonts:
-          - asset: assets/fonts/SourceCodePro-SemiBold.ttf
-      - family: FjallaOne
-        fonts:
-          - asset: assets/fonts/FjallaOne-Regular.ttf
-      - family: Montserrat
-        fonts:
-          - asset: assets/fonts/Montserrat-Medium.ttf
-  #   - family: Schyler
+
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf

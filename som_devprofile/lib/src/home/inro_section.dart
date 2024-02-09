@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'data.dart';
 
 class IntroSection extends StatelessWidget {
@@ -28,8 +29,7 @@ class IntroSection extends StatelessWidget {
                       child: Text(
                         data.split(' ')[i],
                         textScaler: const TextScaler.linear(2.5),
-                        style: TextStyle(
-                          fontFamily: 'FjallaOne',
+                        style: GoogleFonts.novaMono(
                           // letterSpacing: 10.5,
                           fontWeight: FontWeight.w500,
                           color: Theme.of(context).primaryColor,
@@ -42,8 +42,7 @@ class IntroSection extends StatelessWidget {
             //desktop
             : Text(data,
                 textScaler: const TextScaler.linear(7),
-                style: TextStyle(
-                  fontFamily: 'FjallaOne',
+                style: GoogleFonts.novaMono(
                   letterSpacing: 20.5,
                   color: Theme.of(context).primaryColor,
                   fontWeight: FontWeight.w500,

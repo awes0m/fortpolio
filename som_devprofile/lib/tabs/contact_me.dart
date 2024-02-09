@@ -57,6 +57,7 @@ class _ContactMeState extends State<ContactMe> {
         LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
           if (constraints.maxWidth < 1000) {
+            //mobile
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Column(
@@ -132,6 +133,7 @@ class _ContactMeState extends State<ContactMe> {
               ),
             );
           } else {
+            //desktop
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -200,12 +202,12 @@ class _ContactMeState extends State<ContactMe> {
                                   color: CustomTheme.darkTheme.cardColor,
                                 )),
                             child: imageWidget(2.5)),
-                        SocialMediaBar(
-                          height: height,
-                        ),
                       ],
                     ),
                   ],
+                ),
+                SocialMediaBar(
+                  height: height,
                 ),
               ],
             );
@@ -224,9 +226,9 @@ class _ContactMeState extends State<ContactMe> {
               ),
               TextButton(
                 onPressed: () => htmlOpenLink(
-                    'https://github.com/danger-ahead/flutter_dev_folio'),
+                    'https://github.com/awes0m/fortpolio/tree/main/som_devprofile'),
                 child: CustomText(
-                    text: 'Theme by flutter_dev_folio',
+                    text: 'Theme by awes0m',
                     fontSize: 10,
                     color: Theme.of(context).primaryColorLight),
               )

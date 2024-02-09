@@ -4,8 +4,8 @@ import '../src/achievements/card.dart';
 import '../src/achievements/data.dart';
 import '../src/nav_bar/title_bar.dart';
 
-class Achievements extends StatelessWidget {
-  Achievements({Key? key}) : super(key: key);
+class Certifications extends StatelessWidget {
+  Certifications({Key? key}) : super(key: key);
 
   final List<List<String>> data = achievements();
 
@@ -15,7 +15,7 @@ class Achievements extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
 
     return Column(children: [
-      TitleBar(height: height, width: width, title: 'ACHIEVEMENTS'),
+      TitleBar(height: height, width: width, title: 'CERTIFICATIONS'),
       Padding(
         padding: EdgeInsets.only(bottom: height * 0.1),
         child: LayoutBuilder(

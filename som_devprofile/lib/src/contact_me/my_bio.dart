@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'data.dart';
 
 class MyBio extends StatelessWidget {
@@ -22,8 +23,7 @@ class MyBio extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30.0),
                   child: Text(
                     '"$getBio"',
-                    style: TextStyle(
-                        fontFamily: 'SourceCodePro',
+                    style: GoogleFonts.dmMono(
                         letterSpacing: 2,
                         color: Theme.of(context).primaryColorLight,
                         fontSize: fontSize),

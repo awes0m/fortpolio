@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Introduction extends StatelessWidget {
   const Introduction({
@@ -17,8 +18,7 @@ class Introduction extends StatelessWidget {
       child: Text(
         word,
         textScaler: TextScaler.linear(textScaleFactor),
-        style: TextStyle(
-          fontFamily: 'SourceCodePro',
+        style: GoogleFonts.dmMono(
           letterSpacing: 2,
           fontWeight: FontWeight.w500,
           color: Theme.of(context).primaryColorLight,
