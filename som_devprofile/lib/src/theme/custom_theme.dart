@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomTheme extends ChangeNotifier {
-  bool isDarkTheme = false;
+  bool isDarkTheme = true;
   ThemeMode get currentTheme => isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
   void toggleTheme() {
@@ -22,7 +22,7 @@ class CustomTheme extends ChangeNotifier {
 
   static ThemeData get darkTheme {
     return ThemeData(
-      scaffoldBackgroundColor: Color.fromARGB(255, 11, 39, 32),
+      scaffoldBackgroundColor: const Color.fromARGB(255, 11, 39, 32),
       hoverColor: const Color(0xFF02bbe5),
       cardColor: const Color.fromARGB(255, 127, 134, 18),
       primaryColor: const Color(0xFF02bbe5),

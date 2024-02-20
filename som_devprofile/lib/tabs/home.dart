@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
       child: SizedBox(
         child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
-          // desktop
+          // mobile
           if (constraints.maxWidth < 1000) {
             return Padding(
               padding: EdgeInsets.symmetric(horizontal: width * 0.024),
@@ -74,6 +74,7 @@ class _HomePageState extends State<HomePage> {
               ),
             );
           } else {
+            // desktop
             return Padding(
               padding:
                   EdgeInsets.only(top: height * 0.08, bottom: height * 0.07),
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Introduction(
-                            word: 'Hello, I am', textScaleFactor: 3.5),
+                            word: 'Hello, I am', textScaleFactor: 2.5),
                         FittedBox(
                             fit: BoxFit.cover,
                             child: IntroSection(

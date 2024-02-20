@@ -22,13 +22,13 @@ class SocialMediaBar extends StatelessWidget {
       'leetcode'
     ];
     return Padding(
-        padding: EdgeInsets.only(top: height * 0.03),
+        padding: EdgeInsets.only(top: height * 0.01),
         child: FittedBox(
           fit: BoxFit.cover,
           child: Row(
             children: List.generate(data.length, (int i) {
               return IconButton(
-                  iconSize: 50.0,
+                  iconSize: 20.0,
                   hoverColor: Colors.transparent,
                   icon: (data[i][1] != '' &&
                           currentSupportedSocialMedia.contains(data[i][1]))

@@ -93,8 +93,14 @@ class WhatIdo extends StatelessWidget {
                                     : data[1].length - storage - 1,
                                 (int index) {
                               storage = index + i * 4;
-                              return Image.asset(
-                                'assets/what_i_do/${data[1][index + i * 4]}',
+                              return Container(
+                                constraints:
+                                    BoxConstraints.tight(const Size(50, 50)),
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  'assets/what_i_do/${data[1][index + i * 4]}',
+                                ))),
                               );
                             }),
                           ),
@@ -171,8 +177,14 @@ class WhatIdo extends StatelessWidget {
                                     : data[1].length - storage - 1,
                                 (int index) {
                               storage = index + i * 8;
-                              return Image.asset(
-                                'assets/what_i_do/${data[1][index + i * 8]}',
+                              return Container(
+                                constraints: const BoxConstraints.expand(
+                                    width: 80, height: 80),
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                  'assets/what_i_do/${data[1][index + i * 4]}',
+                                ))),
                               );
                             }),
                           ),

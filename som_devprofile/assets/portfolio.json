@@ -4,10 +4,13 @@
         "https://github.com/awes0m"
     ],
     "designation": [
-        "Senior Cybersecurity/Network Administrator.",
-        "Flutter Developer."
+        "Sr Network Administrator.",
+        "Cloud Native Architect",
+        "Web Applications Pentester",
+        "Security Researcher/ Analyst.",
+        "Flutter/Node JS Developer."
     ],
-    "resume_download_link": "https://drive.google.com/file/d/1MI1NpnKTKZQ0Yt2TFxJ2WGJ7i9vPC-8p/view?usp=sharing",
+    "resume_download_link": "https://docs.google.com/document/d/1PTY-cepza96Y1GCA0NLHe5b1Lbzj7yJO/edit?usp=sharing",
     "social_media": {
         "1": [
             "https://github.com/awes0m",
@@ -35,7 +38,7 @@
         ]
     },
     "contact_me": {
-        "location": "Durgapur,Kolkata, India",
+        "location": "Durgapur,WB,India",
         "open_for_opportunities": "Yes",
         "picture": "personal.png"
     },
@@ -43,21 +46,23 @@
     "bio": "Dedicated Cybersecurity Analyst and Cloud-Native Architect with a background in network security (Firewalls and IPS), SIEM (Security Information and Event Management), Vulnerability Management, Email Security, and Backend Development. Proficient in a wide range of programming languages.\n\nKnown for my unwavering enthusiasm, I am driven by a relentless pursuit of challenges and a commitment to continuous innovation.",
     "what_i_do": {
         "tools": [
+            "palo-alto.png",
+            "qualys.png",
+            "kali.jpg",
             "flutter.png",
-            "linux.png",
-            "c.png",
-            "cpp.png",
-            "java.png",
             "python.png",
             "bash.png",
+            "cpp.png",
             "git.png"
         ],
         "proficiency": [
             "Vulnerability Management--90",
-            "Next Generation Firewalls--70",
-            "Security Complince Posture Management--70",
-            "Python/JavaScript--70",
-            "GNU/Linux--50",
+            "Web Application Scanning--80",
+            "Next Gen Firewalls--70",
+            "CCPM/SCPM/GRC--70",
+            "Python--70",
+            "Kali/Linux--50",
+            "JavaScript--50",
             "Git--60"
         ]
     },
@@ -67,16 +72,16 @@
             "location": "hyderabad",
             "years": "2023 - 2025",
             "description": "M.Tech in Cloud Computing",
-            "grades": "8 GPA",
-            "logo": "rcciit.png"
+            "grades": "6 GPA",
+            "logo": "bits_pilani.jpg"
         },
         "2": {
             "institute": "KIIT Deemed University",
             "location": "Bhubaneswar",
             "years": "2015 - 2025",
             "description": "Bachelor of Technology(Mech)",
-            "grades": "8 GPA",
-            "logo": "gitaram.png"
+            "grades": "7.8 GPA",
+            "logo": "kiit_logo.png"
         },
         "3": {
             "institute": "The St. Xavier's School",
@@ -84,7 +89,7 @@
             "years": "2006 - 2012",
             "description": "Secondary Education",
             "grades": "84%",
-            "logo": "stxaviers.png"
+            "logo": "StXavDurgapur.png"
         }
     },
     "experience": {
@@ -92,17 +97,10 @@
             "name": "Wipro technologies",
             "role": "Senior Cybersecurity Analyst",
             "period": "April, 2019 - Present",
-            "description": "Tech Lead of SOC team.",
-            "image_name": "ekko.png"
+            "description": "Tech Lead of Security Operations Center team.Lead Vulnerability Management for Williams Companies (Oil and gas) ",
+            "image_name": "wipro.jpg"
         },
         "2": {
-            "name": "Augway India pvt ltd",
-            "role": "Graphics design Intern",
-            "period": "December, 2018 - February, 2019",
-            "description": "Worked in the Grapics abd video editing.",
-            "image_name": "credanic.png"
-        },
-        "3": {
             "name": "Open Source",
             "role": "Contributor",
             "period": "December, 2020 - Present",
@@ -138,20 +136,20 @@
         "5": {
             "name": "Browser Based Games",
             "tech_stack_used": "HTML, CS, JS",
-            "description": "Multiple browser based offline games",
-            "general_or_github_link": "https://github.com/awes0m/jsTgames"
+            "description": "CLICK to PLAY! \n (hosted on github) \nMultiple browser based offline games",
+            "general_or_github_link": "https://awes0m.github.io/jsTgames/"
         },
         "6": {
             "name": "flappy_som",
             "tech_stack_used": "Flutter ",
-            "description": "The game is a side-scroller where the player controls a bird, attempting to fly between columns of green pipes without hitting them..",
+            "description": "Recreation of the classic game with flutter flame engine.\nThe game is a side-scroller where the player controls a bird, \nattempting to fly between columns of green pipes without hitting them..",
             "general_or_github_link": "https://github.com/awes0m/glutter-fames/tree/main/flappy_som"
         },
         "7": {
             "name": "Sliding Puzzle- Neumorphism",
             "tech_stack_used": "Flutter",
-            "description": "A sliding puzzle, sliding block puzzle, or sliding tile puzzle is a combination puzzle that challenges a player to slide (frequently flat) pieces along certain routes (usually on a board) to establish a certain end-configuration.",
-            "general_or_github_link": "https://github.com/awes0m/glutter-fames/tree/main/sliderr"
+            "description": "CLICK to PLAY! \n\nA sliding puzzle, sliding block puzzle, or sliding tile puzzle is a combination puzzle that challenges a player to slide (frequently flat) pieces along certain routes (usually on a board) to establish a certain end-configuration.",
+            "general_or_github_link": "https://awes0m.github.io/jsTgames/slider_game_flutter/"
         },
         "8":{
             "name": "flu_ttt_er_tictactoe",
