@@ -93,18 +93,25 @@
         }
     },
     "experience": {
-        "1": {
+         "1": {
+            "name": "Thales",
+            "role": "Senior Cloud Security Analyst",
+            "period": "April, 2024 - Present",
+            "description": "Cloud Security , Infrastructure managent and Incident Management ",
+            "image_name": "thales.png"
+        },
+        "2": {
             "name": "Wipro technologies",
             "role": "Senior Cybersecurity Analyst",
-            "period": "April, 2019 - Present",
+            "period": "April, 2019 - 2024",
             "description": "Tech Lead of Security Operations Center team.Lead Vulnerability Management for Williams Companies (Oil and gas) ",
             "image_name": "wipro.jpg"
         },
-        "2": {
+        "3": {
             "name": "Open Source",
             "role": "Contributor",
-            "period": "December, 2020 - Present",
-            "description": "Completed Hacktoberfest'21 with 6 merged pull requests.",
+            "period": "December, 2017 - Present",
+            "description": "Completed and contributed to open source , designing and graphics.",
             "image_name": "opensource.png"
         }
     },
