@@ -7,7 +7,7 @@ import '../constants/constants.dart';
 
 class HeaderLogo extends StatelessWidget {
   /// Header logo widget
-  const HeaderLogo({Key? key}) : super(key: key);
+  const HeaderLogo({super.key});
 
   @override
   Widget build(BuildContext context) {

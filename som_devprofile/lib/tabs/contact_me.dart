@@ -85,7 +85,7 @@ class _ContactMeState extends State<ContactMe> {
                         fontSize: 18,
                         color: Theme.of(context)
                             .primaryColorLight
-                            .withOpacity(0.7)),
+                            .withValues(alpha: (0.7 * 255))),
                   ),
                   MyBio(fontSize: 15),
                   Padding(
@@ -158,7 +158,7 @@ class _ContactMeState extends State<ContactMe> {
                                 fontSize: 18,
                                 color: Theme.of(context)
                                     .primaryColorLight
-                                    .withOpacity(0.7)),
+                                    .withValues(alpha: (0.7 * 255))),
                           ),
                           MyBio(fontSize: 15),
                           Padding(

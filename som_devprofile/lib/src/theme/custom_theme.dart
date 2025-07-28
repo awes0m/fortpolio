@@ -12,7 +12,8 @@ class CustomTheme extends ChangeNotifier {
   static ThemeData get lightTheme {
     return ThemeData(
       scaffoldBackgroundColor: Colors.white,
-      hoverColor: const Color(0xFF1a4b6e).withOpacity(0.225),
+      hoverColor:
+          const Color(0xFF1a4b6e).withValues(alpha: (0.225 * 255).toDouble()),
       cardColor: const Color(0xFF519259),
       primaryColor: const Color(0xFF064635),
       primaryColorDark: Colors.white54,

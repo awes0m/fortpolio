@@ -1,7 +1,6 @@
 //dependencies
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/screen_helper.dart';
 import '../../../constants/constants.dart';
@@ -11,12 +10,10 @@ import '../items/carousel_items.dart';
 
 class Carousel extends StatelessWidget {
   ///The first section of the resume, it contains the Name, the Job Title and short description of the person
-  const Carousel({Key? key}) : super(key: key);
+  const Carousel({super.key});
 
   @override
   Widget build(BuildContext context) {
-    CarouselController carouselController = CarouselController();
-
     double carouselContainerHeight = MediaQuery.of(context).size.height *
         (ScreenHelper.isMobile(context) ? .9 : .95); // 70% of the screen height
 
@@ -24,20 +21,22 @@ class Carousel extends StatelessWidget {
       key: Globals.carouselKey,
       height: carouselContainerHeight,
       width: double.infinity,
+      color: kSecondaryColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
               alignment: Alignment.center,
-              child: CarouselSlider(
-                carouselController: carouselController,
-                options: CarouselOptions(
+              child: FlutterCarousel(
+                options: FlutterCarouselOptions(
                   // autoPlay: true, // Auto play the carousel slides
                   autoPlayInterval:
                       const Duration(seconds: 5), // every 5 seconds
-                  viewportFraction: 1,
-                  scrollPhysics: const NeverScrollableScrollPhysics(),
+                  viewportFraction: 1.0,
+                  physics: const NeverScrollableScrollPhysics(),
                   height: carouselContainerHeight,
+                  enableInfiniteScroll: true,
+                  showIndicator: false,
                 ),
                 items: List.generate(
                   5,
@@ -68,7 +67,6 @@ class Carousel extends StatelessWidget {
               )),
         ],
       ),
-      color: kSecondaryColor,
     );
   }
 }
@@ -76,10 +74,11 @@ class Carousel extends StatelessWidget {
 /// For big Screens
 Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
   return Center(
-    child: ResponsiveWrapper(
-      maxWidth: kDesktopMaxWidth,
-      minWidth: kDesktopMaxWidth,
-      defaultScale: false,
+    child: Container(
+      constraints: const BoxConstraints(
+        maxWidth: kDesktopMaxWidth,
+        minWidth: kDesktopMaxWidth,
+      ),
       child: Row(
         children: [
           Expanded(child: text),
@@ -93,10 +92,11 @@ Widget _buildDesktop(BuildContext context, Widget text, Widget image) {
 /// for medium screens
 Widget _buildTablet(BuildContext context, Widget text, Widget image) {
   return Center(
-    child: ResponsiveWrapper(
-      maxWidth: kTabletMaxWidth,
-      minWidth: kTabletMaxWidth,
-      defaultScale: false,
+    child: Container(
+      constraints: const BoxConstraints(
+        maxWidth: kTabletMaxWidth,
+        minWidth: kTabletMaxWidth,
+      ),
       child: Row(
         children: [
           Expanded(child: text),

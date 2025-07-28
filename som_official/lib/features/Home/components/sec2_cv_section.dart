@@ -10,7 +10,7 @@ import '../../../utils/utils.dart';
 import '../items/user_details_lists.dart';
 
 class CvSection extends StatelessWidget {
-  const CvSection({Key? key}) : super(key: key);
+  const CvSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +28,11 @@ class CvSection extends StatelessWidget {
 
 Widget _buildUI(BuildContext context, double width) {
   // We need the context to get the screen size before the constrains below
-  return ResponsiveWrapper(
-    maxWidth: width,
-    minWidth: width,
-    defaultScale: false,
+  return Container(
+    constraints: BoxConstraints(
+      maxWidth: width,
+      minWidth: width,
+    ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [

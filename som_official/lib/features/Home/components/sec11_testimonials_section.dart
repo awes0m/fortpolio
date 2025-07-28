@@ -1,7 +1,6 @@
 //dependencies
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/common.dart';
 import '../../../constants/constants.dart';
@@ -9,7 +8,7 @@ import '../../../utils/utils.dart';
 import '../items/user_details_lists.dart';
 
 class Testimonials extends StatelessWidget {
-  const Testimonials({Key? key}) : super(key: key);
+  const Testimonials({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +26,11 @@ class Testimonials extends StatelessWidget {
 Widget _buildUI(BuildContext context, double width) {
   return Center(child: LayoutBuilder(
     builder: (BuildContext context, BoxConstraints constraints) {
-      return ResponsiveWrapper(
-          maxWidth: width,
-          minWidth: width,
+      return Container(
+          constraints: BoxConstraints(
+            maxWidth: width,
+            minWidth: width,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

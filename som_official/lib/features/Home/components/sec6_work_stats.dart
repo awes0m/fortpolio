@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/common.dart';
 import '../../../constants/constants.dart';
@@ -15,7 +14,7 @@ List<Stat> stats = [
 ];
 
 class WorkStats extends StatelessWidget {
-  const WorkStats({Key? key}) : super(key: key);
+  const WorkStats({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +30,11 @@ class WorkStats extends StatelessWidget {
 
   Widget _buildUI(BuildContext context, double width) {
     return SizedBox(
-      child: ResponsiveWrapper(
-        maxWidth: width,
-        minWidth: width,
-        defaultScale: false,
+      child: Container(
+        constraints: BoxConstraints(
+          maxWidth: width,
+          minWidth: width,
+        ),
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
             return Wrap(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
+
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../common/common.dart';
@@ -8,7 +8,7 @@ import '../../../constants/constants.dart';
 import '../../../utils/utils.dart';
 
 class AppAdvert1 extends StatelessWidget {
-  const AppAdvert1({Key? key}) : super(key: key);
+  const AppAdvert1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,11 @@ class AppAdvert1 extends StatelessWidget {
   Widget _buildUI(BuildContext context, double width) {
     return Center(
       child: LayoutBuilder(builder: (context, constraints) {
-        return ResponsiveWrapper(
-          maxWidth: width,
-          minWidth: width,
-          defaultScale: false,
+        return Container(
+          constraints: BoxConstraints(
+            maxWidth: width,
+            minWidth: width,
+          ),
           child: Flex(
             direction: constraints.maxWidth > 720
                 ? Axis.horizontal

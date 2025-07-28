@@ -1,7 +1,6 @@
 //dependencies
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../common/screen_helper.dart';
@@ -37,12 +36,12 @@ final List<FooterItem> footerItems = [
 ];
 
 class Footer extends StatelessWidget {
-  const Footer({Key? key}) : super(key: key);
+  const Footer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kPrimaryColor.withOpacity(0.2),
+      color: kPrimaryColor.withValues(alpha: 0.2),
       child: ScreenHelper(
         desktop: _buildUI(context, 1000.0),
         tablet: _buildUI(context, 760),
@@ -55,11 +54,12 @@ class Footer extends StatelessWidget {
 Widget _buildUI(BuildContext context, double width) {
   return Center(
     child: LayoutBuilder(builder: (context, constraints) {
-      return ResponsiveWrapper(
+      return Container(
         key: Globals.contactFooter,
-        maxWidth: width,
-        minWidth: width,
-        defaultScale: false,
+        constraints: BoxConstraints(
+          maxWidth: width,
+          minWidth: width,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

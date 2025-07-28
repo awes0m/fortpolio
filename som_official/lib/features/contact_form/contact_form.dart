@@ -11,7 +11,7 @@ import '../home/homepage.dart';
 
 class ContactFormPage extends StatefulWidget {
   static const String routeName = '/contact-form';
-  const ContactFormPage({Key? key}) : super(key: key);
+  const ContactFormPage({super.key});
 
   @override
   _ContactFormPageState createState() => _ContactFormPageState();
@@ -112,98 +112,107 @@ class _ContactFormPageState extends State<ContactFormPage> {
                       borderRadius: const BorderRadius.all(Radius.circular(7))),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Form(
-                      onWillPop: _onWillPop,
-                      key: _formKey,
-                      child: Column(
-                        children: <Widget>[
-                          Text(
-                            'Contact Form',
-                            style: GoogleFonts.oswald(
-                                fontSize: 30, fontWeight: FontWeight.bold),
-                          ),
-                          const SizedBox(height: 10),
-                          TextFormField(
-                            controller: _nameController,
-                            decoration: const InputDecoration(
-                                labelText: 'Your Name',
-                                focusColor: Colors.white,
-                                focusedBorder: OutlineInputBorder()),
-                            keyboardType: TextInputType.emailAddress,
-                            onFieldSubmitted: (value) {
-                              setState(() {
-                                name = value;
-                              });
-                            },
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return 'Please enter your name';
-                              }
-                              return null;
-                            },
-                          ),
-                          const SizedBox(height: 10),
-
-                          TextFormField(
-                            controller: _emailController,
-                            decoration: const InputDecoration(
-                                labelText: 'Your E-Mail',
-                                focusColor: Colors.white,
-                                focusedBorder: OutlineInputBorder()),
-                            keyboardType: TextInputType.emailAddress,
-                            onFieldSubmitted: (value) {
-                              setState(() {
-                                email = value;
-                              });
-                            },
-                            validator: (value) {
-                              if (value!.isEmpty || !value.contains('@')) {
-                                return 'Invalid email!';
-                              }
-                              return null;
-                            },
-                          ),
-                          const SizedBox(height: 10),
-
-                          // this is where the
-                          // input goes
-                          TextFormField(
-                            controller: _messageController,
-                            minLines: 2,
-                            maxLines: 10,
-                            decoration: const InputDecoration(
-                                labelText: 'Your Message for me!',
-                                focusColor: Colors.white,
-                                focusedBorder: OutlineInputBorder()),
-                            validator: (value) {
-                              if (value!.length < 7) {
-                                return 'Tell a little more about it Please!';
-                              }
-                              return null;
-                            },
-                            onFieldSubmitted: (value) {
-                              setState(() {
-                                message = value;
-                              });
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                minimumSize: const Size(300, 40),
-                                backgroundColor: kPrimaryColor),
-                            onPressed: () {
-                              if (_formKey.currentState!.validate()) {
-                                _submit();
-                              }
-                            },
-                            child: const Text(
-                              "Submit",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                    child: PopScope(
+                      canPop: false,
+                      onPopInvokedWithResult: (didPop, result) async {
+                        if (didPop) return;
+                        final shouldPop = await _onWillPop();
+                        if (shouldPop && context.mounted) {
+                          Navigator.of(context).pop();
+                        }
+                      },
+                      child: Form(
+                        key: _formKey,
+                        child: Column(
+                          children: <Widget>[
+                            Text(
+                              'Contact Form',
+                              style: GoogleFonts.oswald(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
                             ),
-                          ),
-                          const SizedBox(height: 20),
-                        ],
+                            const SizedBox(height: 10),
+                            TextFormField(
+                              controller: _nameController,
+                              decoration: const InputDecoration(
+                                  labelText: 'Your Name',
+                                  focusColor: Colors.white,
+                                  focusedBorder: OutlineInputBorder()),
+                              keyboardType: TextInputType.emailAddress,
+                              onFieldSubmitted: (value) {
+                                setState(() {
+                                  name = value;
+                                });
+                              },
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'Please enter your name';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 10),
+
+                            TextFormField(
+                              controller: _emailController,
+                              decoration: const InputDecoration(
+                                  labelText: 'Your E-Mail',
+                                  focusColor: Colors.white,
+                                  focusedBorder: OutlineInputBorder()),
+                              keyboardType: TextInputType.emailAddress,
+                              onFieldSubmitted: (value) {
+                                setState(() {
+                                  email = value;
+                                });
+                              },
+                              validator: (value) {
+                                if (value!.isEmpty || !value.contains('@')) {
+                                  return 'Invalid email!';
+                                }
+                                return null;
+                              },
+                            ),
+                            const SizedBox(height: 10),
+
+                            // this is where the
+                            // input goes
+                            TextFormField(
+                              controller: _messageController,
+                              minLines: 2,
+                              maxLines: 10,
+                              decoration: const InputDecoration(
+                                  labelText: 'Your Message for me!',
+                                  focusColor: Colors.white,
+                                  focusedBorder: OutlineInputBorder()),
+                              validator: (value) {
+                                if (value!.length < 7) {
+                                  return 'Tell a little more about it Please!';
+                                }
+                                return null;
+                              },
+                              onFieldSubmitted: (value) {
+                                setState(() {
+                                  message = value;
+                                });
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  minimumSize: const Size(300, 40),
+                                  backgroundColor: kPrimaryColor),
+                              onPressed: () {
+                                if (_formKey.currentState!.validate()) {
+                                  _submit();
+                                }
+                              },
+                              child: const Text(
+                                "Submit",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                          ],
+                        ),
                       ),
                     ),
                   ),

@@ -8,46 +8,55 @@ import 'tabs/tabs.dart';
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
+  static const double _breakpoint = 1000.0;
+  static const int _itemCount = 7;
+
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height;
-    final double width = MediaQuery.of(context).size.width;
-    return LayoutBuilder(builder: (context, constraints) {
-      if (constraints.maxWidth < 1000) {
-        // desktop
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final bool isDesktop = constraints.maxWidth >= _breakpoint;
+
         return Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-            child: const ThemeButton(),
-          ),
-          body: ScrollablePositionedList.builder(
-              physics: const BouncingScrollPhysics(),
-              minCacheExtent: double.infinity,
-              shrinkWrap: true,
-              itemCount: 7,
-              itemScrollController: scroll,
-              itemBuilder: (context, index) {
-                return webHeaderList[index];
-              }),
+          appBar: isDesktop ? _buildAppBar(context) : null,
+          floatingActionButton:
+              !isDesktop ? _buildFloatingActionButton(context) : null,
+          body: _buildBody(context, isDesktop),
         );
-      } else {
-        //smaller screens
-        return Scaffold(
-          appBar: PreferredSize(
-              preferredSize: Size(width, height * 0.07),
-              child: const NavBar(isDarkModeBtnVisible: true)),
-          body: ScrollablePositionedList.builder(
-              physics: const BouncingScrollPhysics(),
-              minCacheExtent: double.infinity,
-              shrinkWrap: true,
-              itemCount: 7,
-              itemScrollController: scroll,
-              itemBuilder: (context, index) {
-                return webHeaderList[index];
-              }),
+      },
+    );
+  }
+
+  PreferredSizeWidget _buildAppBar(BuildContext context) {
+    return PreferredSize(
+      preferredSize: Size.fromHeight(MediaQuery.of(context).size.height * 0.07),
+      child: const NavBar(isDarkModeBtnVisible: true),
+    );
+  }
+
+  Widget _buildFloatingActionButton(BuildContext context) {
+    return FloatingActionButton(
+      onPressed: () {},
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      child: const ThemeButton(),
+    );
+  }
+
+  Widget _buildBody(BuildContext context, bool isDesktop) {
+    return ScrollablePositionedList.builder(
+      physics: const BouncingScrollPhysics(),
+      // Remove minCacheExtent: double.infinity for better performance
+      minCacheExtent: MediaQuery.of(context).size.height * 2,
+      shrinkWrap: false, // Better performance
+      itemCount: _itemCount,
+      itemScrollController: scroll,
+      itemBuilder: (context, index) {
+        // Add key for better performance during rebuilds
+        return KeyedSubtree(
+          key: ValueKey('section_$index'),
+          child: webHeaderList[index],
         );
-      }
-    });
+      },
+    );
   }
 }

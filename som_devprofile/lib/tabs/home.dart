@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
         SystemChrome.setApplicationSwitcherDescription(
             ApplicationSwitcherDescription(
           label: 'Meet ${name().split(' ').first}',
-          primaryColor: Colors.black.value,
+          primaryColor: Colors.black.toARGB32(),
         ));
       });
     });

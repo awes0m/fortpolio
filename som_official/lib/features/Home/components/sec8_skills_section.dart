@@ -1,7 +1,6 @@
 //dependencies
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../common/common.dart';
 import '../../../constants/constants.dart';
@@ -10,7 +9,7 @@ import '../items/user_details_lists.dart';
 //imports
 
 class SkillsSection extends StatelessWidget {
-  const SkillsSection({Key? key}) : super(key: key);
+  const SkillsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +28,11 @@ Widget _buildUi(BuildContext context, double width) {
   return Center(
     child: LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        return ResponsiveWrapper(
-            maxWidth: width,
-            minWidth: width,
+        return Container(
+            constraints: BoxConstraints(
+              maxWidth: width,
+              minWidth: width,
+            ),
             child: Flex(
               direction: ScreenHelper.isMobile(context)
                   ? Axis.vertical
@@ -92,8 +93,8 @@ Widget _buildUi(BuildContext context, double width) {
                                                 left: 10.0),
                                             alignment: Alignment.centerLeft,
                                             height: 38.0,
-                                            child: Text(skill.skillName),
                                             color: Colors.white,
+                                            child: Text(skill.skillName),
                                           ),
                                         ),
                                         // const SizedBox(

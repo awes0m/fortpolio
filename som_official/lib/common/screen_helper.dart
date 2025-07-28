@@ -6,11 +6,11 @@ class ScreenHelper extends StatelessWidget {
   final Widget desktop;
 
   const ScreenHelper({
-    Key? key,
+    super.key,
     required this.mobile,
     required this.tablet,
     required this.desktop,
-  }) : super(key: key);
+  });
 
   //Define booleans that  checks the screen size
   static bool isMobile(BuildContext context) =>
@@ -23,7 +23,6 @@ class ScreenHelper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      //LayoutBuilder is a widget that allows us to build a widget based on the screen size
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth > 1200) {
           return desktop;

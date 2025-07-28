@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../common/screen_helper.dart';
@@ -9,7 +8,7 @@ import '../../../utils/utils.dart';
 import '../items/user_details_lists.dart';
 
 class EducationSection extends StatelessWidget {
-  const EducationSection({Key? key}) : super(key: key);
+  const EducationSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +26,11 @@ class EducationSection extends StatelessWidget {
 Widget _buildUi(BuildContext context, double width) {
   return Container(
     alignment: Alignment.center,
-    child: ResponsiveWrapper(
-      maxWidth: width,
-      minWidth: width,
-      defaultScale: false,
+    child: Container(
+      constraints: BoxConstraints(
+        maxWidth: width,
+        minWidth: width,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

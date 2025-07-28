@@ -78,7 +78,7 @@ class _ProgressState extends State<Progress>
                   value: animationController.value,
                   valueColor:
                       AlwaysStoppedAnimation(Theme.of(context).cardColor),
-                  backgroundColor: Theme.of(context).cardColor.withOpacity(0.5),
+                  backgroundColor: Theme.of(context).cardColor.withAlpha((0.5 * 255).toInt()),
                 ),
               ),
             ),

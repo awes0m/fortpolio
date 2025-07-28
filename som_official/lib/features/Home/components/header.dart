@@ -11,14 +11,14 @@ import '../items/header_items.dart';
 
 class HeaderRow extends StatelessWidget {
   /// header menu widget
-  const HeaderRow({Key? key}) : super(key: key);
+  const HeaderRow({super.key});
 
   @override
   Widget build(BuildContext context) {
     /// Handle the header row layout for different screen sizes
     return ResponsiveVisibility(
       visible: false,
-      visibleWhen: const [Condition.largerThan(name: 'MOBILE')],
+      visibleConditions: const [Condition.largerThan(name: 'MOBILE')],
       child: Row(
         children: headerItems
             .map((item) => item.isButton
@@ -76,7 +76,7 @@ class HeaderRow extends StatelessWidget {
 
 class Header extends StatelessWidget {
   /// header widget
-  const Header({Key? key}) : super(key: key);
+  const Header({super.key});
 
   @override
   Widget build(BuildContext context) {

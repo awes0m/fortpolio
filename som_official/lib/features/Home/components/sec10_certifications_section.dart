@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:photo_view/photo_view.dart';
-import 'package:responsive_framework/responsive_framework.dart';
 import 'package:super_tooltip/super_tooltip.dart';
 
 import '../../../common/screen_helper.dart';
@@ -9,7 +8,7 @@ import '../../../constants/constants.dart';
 import '../../../utils/utils.dart';
 
 class CertificationsSection extends StatefulWidget {
-  const CertificationsSection({Key? key}) : super(key: key);
+  const CertificationsSection({super.key});
 
   @override
   State<CertificationsSection> createState() => _CertificationsSectionState();
@@ -28,10 +27,11 @@ class _CertificationsSectionState extends State<CertificationsSection> {
 
 Widget _buildUi(BuildContext context, double width) {
   return Center(
-      child: ResponsiveWrapper(
-    minWidth: width,
-    maxWidth: width,
-    defaultScale: false,
+      child: Container(
+    constraints: BoxConstraints(
+      minWidth: width,
+      maxWidth: width,
+    ),
     child: LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return Column(
@@ -72,13 +72,13 @@ Widget _buildUi(BuildContext context, double width) {
                   ),
                   child: Container(
                     height: 70.0,
-                    child: Image.asset(certificate.logoImagePath),
                     constraints: BoxConstraints(
                       maxWidth: ScreenHelper.isMobile(context)
                           //max 3 per row in mobile and 5 per row in desktop
                           ? constraints.maxWidth / 3 - 50.0
                           : constraints.maxWidth / 5 - 50.0,
                     ),
+                    child: Image.asset(certificate.logoImagePath),
                   ),
                 );
               }).toList(),

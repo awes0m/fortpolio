@@ -21,7 +21,7 @@ import 'components/sec3_workex_section.dart';
 /// The main Page containing all the sections of the resume
 class HomePage extends StatelessWidget {
   static const String routeName = '/home';
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,8 +82,8 @@ class HomePage extends StatelessWidget {
 
 class MobileMenuDrawer extends StatelessWidget {
   const MobileMenuDrawer({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

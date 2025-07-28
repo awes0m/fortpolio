@@ -7,10 +7,10 @@ class CustomImagePopup extends StatelessWidget {
   final String title;
 
   const CustomImagePopup({
-    Key? key,
+    super.key,
     required this.imagePath,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class CustomImagePopup extends StatelessWidget {
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
               child: Container(
-                color: Colors.black.withOpacity(0.5),
+                color: Colors.black.withAlpha((0.5 * 255).toInt()),
               ),
             ),
           ),
