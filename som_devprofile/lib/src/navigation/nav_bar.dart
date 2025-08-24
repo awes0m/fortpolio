@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:som_devprofile/src/custom/header_logo.dart';
 
-import '../theme/theme_button.dart';
+import '../../theme/theme_button.dart';
 import 'nav_bar_btn.dart';
 
 //The top Nav Bar
@@ -19,6 +20,9 @@ class NavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          const SizedBox(width: 8),
+          const HeaderLogo(),
+          const SizedBox(width: 5),
           UnderlinedButton(
               context: context,
               tabNumber: 0,

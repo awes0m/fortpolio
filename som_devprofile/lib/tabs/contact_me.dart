@@ -5,8 +5,7 @@ import '../src/contact_me/my_bio.dart';
 import '../src/custom/custom_text.dart';
 import '../src/home/social_media_bar.dart';
 import '../src/html_open_link.dart';
-import '../src/theme/config.dart';
-import '../src/theme/custom_theme.dart';
+import '../theme/config.dart';
 
 class ContactMe extends StatefulWidget {
   const ContactMe({Key? key}) : super(key: key);
@@ -65,7 +64,7 @@ class _ContactMeState extends State<ContactMe> {
                   CustomText(
                       text: 'Reach Out to me!',
                       fontSize: 28,
-                      color: Theme.of(context).primaryColorLight),
+                      color: Theme.of(context).colorScheme.primary),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5.0),
                     child: Container(
@@ -73,7 +72,7 @@ class _ContactMeState extends State<ContactMe> {
                             shape: BoxShape.circle,
                             border: Border.all(
                               width: 7,
-                              color: CustomTheme.darkTheme.cardColor,
+                              color: Theme.of(context).colorScheme.primary,
                             )),
                         child: imageWidget(2.7)),
                   ),
@@ -84,7 +83,8 @@ class _ContactMeState extends State<ContactMe> {
                             'DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.',
                         fontSize: 18,
                         color: Theme.of(context)
-                            .primaryColorLight
+                            .colorScheme
+                            .primary
                             .withValues(alpha: (0.7 * 255))),
                   ),
                   MyBio(fontSize: 15),
@@ -107,7 +107,7 @@ class _ContactMeState extends State<ContactMe> {
                         CustomText(
                             text: ' ${data[0]}',
                             fontSize: 18,
-                            color: Theme.of(context).primaryColorLight),
+                            color: Theme.of(context).colorScheme.primary),
                       ],
                     ),
                   ),
@@ -120,7 +120,7 @@ class _ContactMeState extends State<ContactMe> {
                         ? CustomText(
                             text: 'Open for opportunities: ${data[1]}',
                             fontSize: 18,
-                            color: Theme.of(context).primaryColorLight)
+                            color: Theme.of(context).colorScheme.primary)
                         : const Center(),
                   ),
                   Padding(
@@ -199,7 +199,7 @@ class _ContactMeState extends State<ContactMe> {
                                 shape: BoxShape.circle,
                                 border: Border.all(
                                   width: 7,
-                                  color: CustomTheme.darkTheme.cardColor,
+                                  color: Theme.of(context).primaryColorLight,
                                 )),
                             child: imageWidget(2.5)),
                       ],

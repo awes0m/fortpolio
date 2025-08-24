@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../src/education/card.dart';
 import '../src/education/data.dart';
-import '../src/nav_bar/title_bar.dart';
+import '../src/navigation/title_bar.dart';
 
 class Education extends StatelessWidget {
   Education({Key? key}) : super(key: key);

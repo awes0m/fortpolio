@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../custom/custom_text.dart';
 import '../html_open_link.dart';
-import '../theme/config.dart';
+import '../../theme/config.dart';
 import 'data.dart';
 
 class ProjectsCard extends StatefulWidget {
@@ -68,7 +68,7 @@ class _ProjectsCardState extends State<ProjectsCard> {
             ],
             color: currentTheme.currentTheme == ThemeMode.dark
                 ? Theme.of(context).cardColor
-                : Theme.of(context).primaryColor,
+                : Theme.of(context).colorScheme.primary,
             borderRadius: BorderRadius.circular(
               5.0,
             ),

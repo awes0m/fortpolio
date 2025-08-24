@@ -20,7 +20,7 @@ class Designation extends StatelessWidget {
       children: [
         Icon(
           Icons.play_arrow_rounded,
-          color: Theme.of(context).primaryColorLight,
+          color: Theme.of(context).colorScheme.primary,
           size: isMobile ? 50 : 60,
         ),
         TextSwapController(
@@ -76,6 +76,6 @@ class _TextSwapControllerState extends State<TextSwapController> {
             : widget.data[i++],
         isTextAlignCenter: false,
         fontSize: widget.isMobile ? 20 : 42,
-        color: Theme.of(context).primaryColorLight);
+        color: Theme.of(context).colorScheme.primary);
   }
 }

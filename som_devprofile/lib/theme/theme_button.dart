@@ -16,7 +16,7 @@ class ThemeButtonState extends State<ThemeButton> {
       focusColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      color: Theme.of(context).primaryColorLight,
+      color: Theme.of(context).colorScheme.primary,
       onPressed: () {
         currentTheme.toggleTheme();
         setState(() {});

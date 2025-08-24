@@ -25,7 +25,7 @@ class MyBio extends StatelessWidget {
                     '"$getBio"',
                     style: GoogleFonts.dmMono(
                         letterSpacing: 2,
-                        color: Theme.of(context).primaryColorLight,
+                        color: Theme.of(context).colorScheme.primary,
                         fontSize: fontSize),
                   ),
                 ),

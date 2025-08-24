@@ -61,8 +61,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                   About(fontSize: 24),
                   Padding(
-                    padding: EdgeInsets.only(bottom: height * 0.029),
-                    child: OverflowBar(
+                    padding: EdgeInsets.only(
+                        bottom: height * 0.029, left: width * 0.02),
+                    child: const OverflowBar(
                       children: [
                         Resume(
                           width: 0,
@@ -99,16 +100,16 @@ class _HomePageState extends State<HomePage> {
                           height: height,
                         ),
                         About(fontSize: 30),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: height * 0.026),
-                          child: Row(
-                            children: [
-                              Resume(
-                                width: width,
-                              ),
-                            ],
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: EdgeInsets.only(bottom: height * 0.026),
+                        //   child: Row(
+                        //     children: [
+                        //       Resume(
+                        //         width: width,
+                        //       ),
+                        //     ],
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),

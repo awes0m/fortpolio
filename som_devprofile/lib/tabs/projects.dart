@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../src/nav_bar/title_bar.dart';
+import '../src/navigation/title_bar.dart';
 import '../src/projects/card.dart';
 import '../src/projects/data.dart';
 

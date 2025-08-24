@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import 'src/nav_bar/nav_bar.dart';
-import 'src/theme/theme_button.dart';
+import 'src/navigation/nav_bar.dart';
+import 'src/navigation/bottom_nav_bar.dart';
+import 'theme/theme_button.dart';
 import 'tabs/tabs.dart';
 
 class App extends StatelessWidget {
@@ -22,6 +23,7 @@ class App extends StatelessWidget {
           floatingActionButton:
               !isDesktop ? _buildFloatingActionButton(context) : null,
           body: _buildBody(context, isDesktop),
+          bottomNavigationBar: !isDesktop ? const BottomNavBar() : null,
         );
       },
     );
@@ -50,6 +52,7 @@ class App extends StatelessWidget {
       shrinkWrap: false, // Better performance
       itemCount: _itemCount,
       itemScrollController: scroll,
+      itemPositionsListener: itemPositionsListener,
       itemBuilder: (context, index) {
         // Add key for better performance during rebuilds
         return KeyedSubtree(

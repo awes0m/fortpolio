@@ -21,7 +21,7 @@ class Introduction extends StatelessWidget {
         style: GoogleFonts.dmMono(
           letterSpacing: 2,
           fontWeight: FontWeight.w500,
-          color: Theme.of(context).primaryColorLight,
+          color: Theme.of(context).colorScheme.primary,
         ),
       ),
     );

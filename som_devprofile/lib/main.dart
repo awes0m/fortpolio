@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:som_devprofile/src/custom/header_logo.dart';
 import 'app.dart';
 import 'src/configure_web.dart';
 import 'src/json_service.dart';
-import 'src/theme/config.dart';
-import 'src/theme/custom_theme.dart';
+import 'theme/config.dart';
+import 'theme/material_theme.dart';
+import 'common/util.dart';
 
 void main() {
   configureApp();
@@ -17,6 +19,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  bool _splashDone = false;
   @override
   void initState() {
     super.initState();
@@ -35,6 +38,10 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> _initializeApp() async {
     await jsonService.init();
+    // Start splash timer once init complete
+    Future.delayed(const Duration(milliseconds: 1400), () {
+      if (mounted) setState(() => _splashDone = true);
+    });
   }
 
   @override
@@ -46,47 +53,98 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return JSONService.hasLoaded
-        ? MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Som Subhra Pandit - Portfolio',
-            theme: CustomTheme.lightTheme,
-            darkTheme: CustomTheme.darkTheme,
-            themeMode: currentTheme.currentTheme,
-            home: const App(),
-            // Add performance optimizations
-            builder: (context, child) {
-              return MediaQuery(
-                data: MediaQuery.of(context).copyWith(
-                  textScaler: TextScaler.linear(
-                    MediaQuery.of(context)
-                        .textScaler
-                        .scale(1.0)
-                        .clamp(0.8, 1.2),
-                  ),
-                ),
-                child: child!,
-              );
-            },
-          )
-        : MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: Scaffold(
-              backgroundColor: Colors.white,
-              body: Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const CircularProgressIndicator(),
-                    const SizedBox(height: 16),
-                    Text(
-                      'Loading Portfolio...',
-                      style: Theme.of(context).textTheme.bodyLarge,
-                    ),
-                  ],
-                ),
+    final Widget app = MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Som Subhra Pandit - Portfolio',
+      theme: (const MaterialTheme(TextTheme()).light()),
+      darkTheme: (const MaterialTheme(TextTheme()).dark()),
+      themeMode: currentTheme.currentTheme,
+      home: const App(),
+      builder: (context, child) {
+        final themedChild = Theme(
+          data: Theme.of(context).copyWith(
+            textTheme:
+                createTextTheme(context, "Source Code Pro", "Ubuntu Condensed"),
+          ),
+          child: child!,
+        );
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(
+            textScaler: TextScaler.linear(
+              MediaQuery.of(context).textScaler.scale(1.0).clamp(0.8, 1.2),
+            ),
+          ),
+          child: themedChild,
+        );
+      },
+    );
+
+    // Show splash until both data is loaded and splash finished
+    if (JSONService.hasLoaded && _splashDone) {
+      return app;
+    }
+
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: _SplashScreen(),
+    );
+  }
+}
+
+class _SplashScreen extends StatefulWidget {
+  const _SplashScreen({Key? key}) : super(key: key);
+  @override
+  State<_SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<_SplashScreen>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+  late final Animation<double> _fadeInOut;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 6000),
+    );
+    // Fade in to 1.0 by 60%, then fade out to 0.0 by 100%
+    _fadeInOut = TweenSequence<double>([
+      TweenSequenceItem(tween: Tween(begin: 0.0, end: 1.0), weight: 900),
+      TweenSequenceItem(tween: Tween(begin: 1.0, end: 0.0), weight: 40),
+    ]).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
+
+    _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FadeTransition(opacity: _fadeInOut, child: const HeaderLogo()),
+            FadeTransition(
+              opacity: _fadeInOut,
+              child: Text(
+                'Welcome visitor!\nPlease wait while we load the profile...',
+                style: Theme.of(context).textTheme.headlineSmall,
+                textAlign: TextAlign.center,
               ),
             ),
-          );
+          ],
+        ),
+      ),
+    );
   }
 }

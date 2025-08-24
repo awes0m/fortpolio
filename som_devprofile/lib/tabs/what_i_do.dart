@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../src/custom/custom_text.dart';
-import '../src/nav_bar/title_bar.dart';
-import '../src/theme/config.dart';
+import '../src/navigation/title_bar.dart';
+import '../theme/config.dart';
 import '../src/whatIDo/data.dart';
 import '../src/whatIDo/progress.dart';
 
@@ -34,7 +34,7 @@ class WhatIdo extends StatelessWidget {
                     child: CustomText(
                         text: '⚡ I have a good proficiency in:',
                         fontSize: 15,
-                        color: Theme.of(context).primaryColorLight),
+                        color: Theme.of(context).colorScheme.primary),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
@@ -74,7 +74,7 @@ class WhatIdo extends StatelessWidget {
                             ? '⚡ Some languages & tools I use:'
                             : '',
                         fontSize: 15,
-                        color: Theme.of(context).primaryColorLight),
+                        color: Theme.of(context).colorScheme.primary),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 25, 15, 20),
@@ -120,7 +120,7 @@ class WhatIdo extends StatelessWidget {
                     child: CustomText(
                         text: '⚡ I have a good proficiency in:',
                         fontSize: 35,
-                        color: Theme.of(context).primaryColorLight),
+                        color: Theme.of(context).colorScheme.primary),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 25.0),
@@ -155,7 +155,7 @@ class WhatIdo extends StatelessWidget {
                             ? '⚡ Some languages & tools I use:'
                             : '',
                         fontSize: 35,
-                        color: Theme.of(context).primaryColorLight),
+                        color: Theme.of(context).colorScheme.primary),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(

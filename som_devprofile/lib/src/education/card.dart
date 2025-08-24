@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom/custom_text.dart';
-import '../theme/config.dart';
+import '../../theme/config.dart';
 
 class EducationDesktop extends StatefulWidget {
   const EducationDesktop(
@@ -65,7 +65,7 @@ class _EducationDesktopState extends State<EducationDesktop> {
             ],
             color: currentTheme.currentTheme == ThemeMode.dark
                 ? Theme.of(context).cardColor
-                : Theme.of(context).primaryColor,
+                : Theme.of(context).colorScheme.primary,
             borderRadius: BorderRadius.circular(
               5.0,
             ),

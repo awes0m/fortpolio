@@ -119,7 +119,7 @@
         "1": {
             "name": "Drum-ru 😎",
             "tech_stack_used": "Pygame(using Python)",
-            "description": "Windows(EXE) DOWNLOAD available! \nFull Drumpad with customizable beats and Recording ,  ",
+            "description": "Windows(EXE) DOWNLOAD available! \nFull Drumpad with customizable beats and Recording , Web/andoid app comming soon,  ",
             "general_or_github_link": "https://github.com/awes0m/pybeats"
         },
         "2": {
@@ -129,9 +129,9 @@
             "general_or_github_link": "https://github.com/awes0m/pyiano"
         },
         "3": {
-            "name": "Godly-Networking-Scripts",
-            "tech_stack_used": "Python, PowerShell",
-            "description": "As the name suggest all networking basic automations, Handy and easy to use for a professional , uses basic libraries no additinal requirements",
+            "name": "nUMERO-uNO",
+            "tech_stack_used": "Flutter ",
+            "description": "a numerology calculating app , Telling your future based on your birth date and name , with daily predictions and compatibility checkers",
             "general_or_github_link": "https://github.com/awes0m/Godly-Networking-Scripts"
         },
         "4": {
@@ -169,6 +169,12 @@
             "tech_stack_used": "Python(Django),HTML,CSS",
             "description": "A django based customer relationship portal",
             "general_or_github_link": "https://github.com/awes0m/apisod-crm"
+        },
+        "10": {
+            "name": "Godly-Networking-Scripts",
+            "tech_stack_used": "Python, PowerShell",
+            "description": "As the name suggest all networking basic automations, Handy and easy to use for a professional , uses basic libraries no additinal requirements",
+            "general_or_github_link": "https://github.com/awes0m/Godly-Networking-Scripts"
         }
     },
     "achievements": {

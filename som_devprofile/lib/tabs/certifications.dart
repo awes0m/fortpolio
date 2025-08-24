@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../src/achievements/card.dart';
 import '../src/achievements/data.dart';
-import '../src/nav_bar/title_bar.dart';
+import '../src/navigation/title_bar.dart';
 
 class Certifications extends StatelessWidget {
   Certifications({Key? key}) : super(key: key);

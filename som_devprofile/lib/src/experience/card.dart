@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom/custom_text.dart';
-import '../theme/config.dart';
+import '../../theme/config.dart';
 
 class ExperienceCard extends StatefulWidget {
   const ExperienceCard(
@@ -71,7 +71,7 @@ class _ExperienceCardState extends State<ExperienceCard> {
               width: 3,
               color: currentTheme.currentTheme == ThemeMode.dark
                   ? Theme.of(context).cardColor
-                  : Theme.of(context).primaryColor,
+                  : Theme.of(context).colorScheme.primary,
             ),
           ),
           child: Column(
@@ -91,7 +91,7 @@ class _ExperienceCardState extends State<ExperienceCard> {
                 decoration: BoxDecoration(
                   color: currentTheme.currentTheme == ThemeMode.dark
                       ? Theme.of(context).cardColor
-                      : Theme.of(context).primaryColor,
+                      : Theme.of(context).colorScheme.primary,
                   borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(5.0),
                     bottomRight: Radius.circular(5.0),

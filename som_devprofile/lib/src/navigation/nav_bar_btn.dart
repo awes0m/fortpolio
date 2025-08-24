@@ -52,7 +52,7 @@ class _UnderlinedButtonState extends State<UnderlinedButton> {
                   height: MediaQuery.of(context).size.height * 0.004,
                   width: MediaQuery.of(context).size.width * 0.045,
                   decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),
@@ -62,9 +62,11 @@ class _UnderlinedButtonState extends State<UnderlinedButton> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(widget.btnNumber,
-                    style: textStyle(11, Theme.of(context).primaryColorLight)),
+                    style:
+                        textStyle(11, Theme.of(context).colorScheme.primary)),
                 Text(widget.btnName,
-                    style: textStyle(15, Theme.of(context).primaryColor)),
+                    style:
+                        textStyle(15, Theme.of(context).colorScheme.primary)),
               ],
             ),
             Visibility(
@@ -73,7 +75,7 @@ class _UnderlinedButtonState extends State<UnderlinedButton> {
                 height: MediaQuery.of(context).size.height * 0.004,
                 width: MediaQuery.of(context).size.width * 0.045,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).colorScheme.primary,
                   borderRadius: BorderRadius.circular(50),
                 ),
               ),

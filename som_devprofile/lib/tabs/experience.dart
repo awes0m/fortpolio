@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../src/experience/card.dart';
 import '../src/experience/data.dart';
-import '../src/nav_bar/title_bar.dart';
+import '../src/navigation/title_bar.dart';
 
 class Experience extends StatelessWidget {
   Experience({Key? key}) : super(key: key);

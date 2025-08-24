@@ -23,7 +23,7 @@ class About extends StatelessWidget {
               gotAbout,
               style: GoogleFonts.dmMono(
                   letterSpacing: 2.5,
-                  color: Theme.of(context).primaryColorLight,
+                  color: Theme.of(context).colorScheme.primary,
                   fontSize: fontSize),
             ),
           ),

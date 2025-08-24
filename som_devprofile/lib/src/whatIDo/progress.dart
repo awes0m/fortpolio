@@ -61,11 +61,11 @@ class _ProgressState extends State<Progress>
                   CustomText(
                       text: widget.title,
                       fontSize: widget.sizeProficiencyName,
-                      color: Theme.of(context).primaryColorLight),
+                      color: Theme.of(context).colorScheme.onSurface),
                   CustomText(
                       text: '${percentage.toStringAsFixed(0)}%',
                       fontSize: widget.sizePercentage,
-                      color: Theme.of(context).primaryColorLight)
+                      color: Theme.of(context).colorScheme.onSurface)
                 ],
               ),
             ),
@@ -75,10 +75,14 @@ class _ProgressState extends State<Progress>
               child: ClipRRect(
                 borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: LinearProgressIndicator(
+                  color: Theme.of(context).colorScheme.onSurface,
                   value: animationController.value,
                   valueColor:
                       AlwaysStoppedAnimation(Theme.of(context).cardColor),
-                  backgroundColor: Theme.of(context).cardColor.withAlpha((0.5 * 255).toInt()),
+                  backgroundColor: Theme.of(context)
+                      .colorScheme
+                      .onSurface
+                      .withAlpha((0.5 * 255).toInt()),
                 ),
               ),
             ),
