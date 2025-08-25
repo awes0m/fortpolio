@@ -145,8 +145,8 @@ class _FunkyOutlinePainter extends CustomPainter {
     final metrics = path.computeMetrics().first;
     final total = metrics.length;
 
-    final dash = 18.0; // dash length
-    final gap = 12.0; // gap length
+    const dash = 18.0; // dash length
+    const gap = 12.0; // gap length
     final shift = (dash + gap) * progress; // move along path
 
     final paintDash = Paint()
