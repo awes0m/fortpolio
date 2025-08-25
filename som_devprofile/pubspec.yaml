@@ -79,6 +79,7 @@ flutter:
     - assets/projects/
     - assets/projects/constant/
     - assets/achievements/
+    - assets/achievements/constant/
     - assets/portfolio.json
 
 

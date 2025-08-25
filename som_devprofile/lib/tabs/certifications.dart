@@ -29,6 +29,8 @@ class Certifications extends StatelessWidget {
                     desc: data[i][0],
                     link: data[i][1],
                     isMobile: true,
+                    showImageDialog: true,
+                    imagePath: 'assets/achievements/constant/achievement.png',
                   ),
                 );
               }),
@@ -51,6 +53,8 @@ class Certifications extends StatelessWidget {
                         desc: data[index + i * 3][0],
                         link: data[index + i * 3][1],
                         isMobile: false,
+                        showImageDialog: true,
+                        imagePath: 'assets/achievements/constant/achievement.png',
                       );
                     }),
                   ),

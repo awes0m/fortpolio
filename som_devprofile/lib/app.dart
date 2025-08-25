@@ -3,6 +3,7 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import 'src/navigation/nav_bar.dart';
 import 'src/navigation/bottom_nav_bar.dart';
+import 'src/animations/section_animation.dart';
 import 'theme/theme_button.dart';
 import 'tabs/tabs.dart';
 
@@ -57,9 +58,34 @@ class App extends StatelessWidget {
         // Add key for better performance during rebuilds
         return KeyedSubtree(
           key: ValueKey('section_$index'),
-          child: webHeaderList[index],
+          child: AnimatedSection(
+            delay: Duration(milliseconds: index * 200),
+            animationType: _getAnimationType(index),
+            child: webHeaderList[index],
+          ),
         );
       },
     );
+  }
+
+  AnimationType _getAnimationType(int index) {
+    switch (index) {
+      case 0: // Home
+        return AnimationType.fadeInUp;
+      case 1: // What I Do
+        return AnimationType.scaleIn;
+      case 2: // Education
+        return AnimationType.fadeInUp;
+      case 3: // Experience
+        return AnimationType.typewriter;
+      case 4: // Projects
+        return AnimationType.scaleIn;
+      case 5: // Certifications
+        return AnimationType.fadeInUp;
+      case 6: // Contact
+        return AnimationType.fadeIn;
+      default:
+        return AnimationType.fadeInUp;
+    }
   }
 }
