@@ -20,10 +20,44 @@ class LandingPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final items = ref.watch(galleryProvider);
+    final items = ref.watch(filteredGalleryProvider);
+    final filter = ref.watch(galleryFilterProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Walkman Gallery'), centerTitle: true),
+      appBar: AppBar(
+        title: const Text('Walkman Gallery'),
+        centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<GalleryFilter>(
+                value: filter,
+                alignment: Alignment.center,
+                onChanged: (value) {
+                  if (value != null) {
+                    ref.read(galleryFilterProvider.notifier).state = value;
+                  }
+                },
+                items: const [
+                  DropdownMenuItem(
+                    value: GalleryFilter.both,
+                    child: Text('Both'),
+                  ),
+                  DropdownMenuItem(
+                    value: GalleryFilter.app,
+                    child: Text('Apps'),
+                  ),
+                  DropdownMenuItem(
+                    value: GalleryFilter.painting,
+                    child: Text('Paintings'),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
       body: Stack(
         children: [
           // Subtle backdrop gradient to enhance depth
@@ -41,14 +75,37 @@ class LandingPage extends ConsumerWidget {
                       horizontal: 12,
                       vertical: 24,
                     ),
-                    child: WalkmanAlbum(
-                      items: items,
-                      onItemTap: (item) => _onItemSelected(context, item),
-                    ),
+                    child: items.isEmpty
+                        ? const _EmptyState()
+                        : WalkmanAlbum(
+                            items: items,
+                            onItemTap: (item) => _onItemSelected(context, item),
+                          ),
                   ),
                 );
               },
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _EmptyState extends StatelessWidget {
+  const _EmptyState();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: const [
+          Icon(Icons.inbox_outlined, size: 40, color: Colors.white38),
+          SizedBox(height: 8),
+          Text(
+            'No items for this filter',
+            style: TextStyle(color: Colors.white70),
           ),
         ],
       ),

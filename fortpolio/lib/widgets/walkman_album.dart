@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/gallery_item.dart';
@@ -71,23 +72,26 @@ class _WalkmanAlbumState extends ConsumerState<WalkmanAlbum> {
           children: [
             SizedBox(
               height: _cardHeightFor(constraints.maxWidth),
-              child: PageView.builder(
-                controller: _controller,
-                physics: const BouncingScrollPhysics(),
-                itemCount: widget.items.length,
-                itemBuilder: (context, index) {
-                  final item = widget.items[index];
-                  return _WalkmanCard(
-                    item: item,
-                    index: index,
-                    page: _page,
-                    hovered: _hoveredIndex == index,
-                    onHoverChanged: (isHover) {
-                      setState(() => _hoveredIndex = isHover ? index : null);
-                    },
-                    onTap: () => widget.onItemTap(item),
-                  );
-                },
+              child: Listener(
+                onPointerSignal: _handlePointerSignal,
+                child: PageView.builder(
+                  controller: _controller,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: widget.items.length,
+                  itemBuilder: (context, index) {
+                    final item = widget.items[index];
+                    return _WalkmanCard(
+                      item: item,
+                      index: index,
+                      page: _page,
+                      hovered: _hoveredIndex == index,
+                      onHoverChanged: (isHover) {
+                        setState(() => _hoveredIndex = isHover ? index : null);
+                      },
+                      onTap: () => widget.onItemTap(item),
+                    );
+                  },
+                ),
               ),
             ),
             const SizedBox(height: 16),
@@ -98,6 +102,32 @@ class _WalkmanAlbumState extends ConsumerState<WalkmanAlbum> {
           ],
         );
       },
+    );
+  }
+
+  // Handle mouse wheel/trackpad and snap to next/previous page (throttled)
+  DateTime _lastWheelSnap = DateTime.fromMillisecondsSinceEpoch(0);
+  void _handlePointerSignal(PointerSignalEvent event) {
+    if (event is! PointerScrollEvent) return;
+
+    const throttle = Duration(milliseconds: 320);
+    if (DateTime.now().difference(_lastWheelSnap) < throttle) return;
+
+    final dy = event.scrollDelta.dy;
+    final dx = event.scrollDelta.dx;
+    final primary = (dy.abs() >= dx.abs()) ? dy : dx;
+    if (primary == 0) return;
+
+    final current = (_controller.page ?? 0).round();
+    int target = primary > 0 ? current + 1 : current - 1;
+    target = target.clamp(0, widget.items.length - 1);
+    if (target == current) return;
+
+    _lastWheelSnap = DateTime.now();
+    _controller.animateToPage(
+      target,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOutCubic,
     );
   }
 

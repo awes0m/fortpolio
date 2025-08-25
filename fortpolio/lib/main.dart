@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'theme/app_theme.dart';
 import 'pages/landing_page.dart';
 import 'pages/painting_detail_page.dart';
+import 'pages/hero_page.dart';
 
 void main() {
   // Riverpod root scope
@@ -20,8 +21,11 @@ class MyApp extends StatelessWidget {
       title: 'Walkman Gallery',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
-      // Named route for root
-      routes: {'/': (context) => const LandingPage()},
+      // Named routes
+      routes: {
+        '/': (context) => const HeroPage(), // initial: Hero/About page
+        '/gallery': (context) => const LandingPage(),
+      },
       // Handle dynamic routes like /painting/:id
       onGenerateRoute: (settings) {
         final name = settings.name ?? '/';
@@ -37,7 +41,7 @@ class MyApp extends StatelessWidget {
           );
         }
         // Fallback
-        return MaterialPageRoute(builder: (_) => const LandingPage());
+        return MaterialPageRoute(builder: (_) => const HeroPage());
       },
     );
   }
