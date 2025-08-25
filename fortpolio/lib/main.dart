@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Walkman Gallery',
+      title: 'Som Home- A Walkman styled Gallery',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
       // Named routes

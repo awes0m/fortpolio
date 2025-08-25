@@ -88,7 +88,7 @@ class _HeroPageState extends State<HeroPage>
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('About'), centerTitle: true),
+      appBar: AppBar(title: const Text('About - Som Home'), centerTitle: true),
       body: Listener(
         onPointerSignal: _onPointerSignal,
         child: GestureDetector(
@@ -129,7 +129,7 @@ class _HeroPageState extends State<HeroPage>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          'Walkman Gallery — About',
+                          'Som Home — A Digital Journey of a Creative Mind',
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
@@ -137,22 +137,22 @@ class _HeroPageState extends State<HeroPage>
                         ),
                         SizedBox(height: 16),
                         Text(
-                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+                          'The Gallery contains Artworks in form of Paintings and Applications developed over the years..',
                           style: TextStyle(fontSize: 16, height: 1.5),
                         ),
                         SizedBox(height: 12),
                         Text(
-                          'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+                          'Each piece reflects a unique aspect of creativity and technical skill, showcasing a blend of visual artistry and functional design',
                           style: TextStyle(fontSize: 16, height: 1.5),
                         ),
                         SizedBox(height: 12),
                         Text(
-                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Vivamus laoreet, augue vitae pulvinar varius, dui nisl tempus mi, sit amet volutpat augue arcu id felis.',
+                          'You are free to use this gallery for inspiration and reference , Download them or use it for your own creative break... All my works are under Creative Commons.',
                           style: TextStyle(fontSize: 16, height: 1.5),
                         ),
                         SizedBox(height: 12),
                         Text(
-                          'Mauris rutrum, massa id dictum pretium, lectus eros sollicitudin nibh, sed pulvinar dolor nulla et justo. Curabitur nec lacinia nibh. Integer in arcu ut ligula pharetra interdum.',
+                          'try it out.',
                           style: TextStyle(fontSize: 16, height: 1.5),
                         ),
                       ],

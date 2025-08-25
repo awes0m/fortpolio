@@ -89,24 +89,25 @@ Routing is handled in `main.dart` with `routes` and `onGenerateRoute`.
 ## Key Files
 
 - `lib/pages/landing_page.dart`
+
   - Displays the Walkman-style carousel (`WalkmanAlbum`)
   - Click handling: app → open new tab, painting → navigate to detail
-
 - `lib/widgets/walkman_album.dart`
+
   - Animated carousel with perspective, tilt, scale, and shadows
   - Responsive `viewportFraction` and simple dots indicator
-
 - `lib/pages/painting_detail_page.dart`
+
   - Shows the full image
   - Download button uses `dart:html` anchor to trigger browser download (web only)
-
 - `lib/utils/web_actions.dart`
+
   - `openInNewTab(url)`
   - `downloadFromUrl(url, suggestedFileName)`
 
 ## Customization
 
-- Add/modify sample items in `lib/providers/gallery_provider.dart`
+- Add/modify sample items in `lib/src/gallery_items_list.dart`
 - Change colors/typography in `lib/theme/app_theme.dart`
 - Tweak animation feel (tilt, scale, elevation) in `lib/widgets/walkman_album.dart`
 
