@@ -25,7 +25,7 @@ class LandingPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Walkman Gallery'),
+        title: const Text('Som Home-A Creative Gully'),
         centerTitle: true,
         actions: [
           Padding(

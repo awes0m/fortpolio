@@ -8,56 +8,80 @@ final galleryProvider = Provider<List<GalleryItem>>((ref) {
   return const [
     GalleryItem(
       id: '1',
-      title: 'Starry Night',
-      type: GalleryItemType.painting,
+      title: 'Numero Uno - Numerology Calculator 🔮 [LIVE]',
+      type: GalleryItemType.app,
       imageUrl:
-          'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&w=800&q=60',
-      link:
-          'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&w=2000&q=80',
+          'https://raw.githubusercontent.com/awes0m/numero_uno/refs/heads/main/Numero-uno.jpg',
+      link: 'https://awes0m.github.io/numerouno/',
     ),
     GalleryItem(
       id: '2',
-      title: 'My Cool App',
+      title: 'Fluttering Drums - Drum Machine 🥁 [LIVE]',
       type: GalleryItemType.app,
       imageUrl:
-          'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&w=800&q=60',
-      link: 'https://play.google.com/store/apps/details?id=my.cool.app',
+          'https://raw.githubusercontent.com/awes0m/fluttering_drums/refs/heads/master/fluttering_drums.jpg',
+      link: 'https://awes0m.github.io/fluttering_drums/',
+    ),
+    GalleryItem(
+      id: '3',
+      title: 'Pyiano Download 🥁 [Android/Windows]',
+      type: GalleryItemType.app,
+      imageUrl:
+          'https://raw.githubusercontent.com/awes0m/ppiano/refs/heads/main/ppiano.jpg',
+      link: 'https://awes0m.github.io/ppiano/',
     ),
     // More paintings
     GalleryItem(
-      id: '3',
-      title: 'Ocean Breeze',
-      type: GalleryItemType.painting,
+      id: '4',
+      title: 'Fluttering Drums - Drum Machine-(Android Download)',
+      type: GalleryItemType.app,
       imageUrl:
-          'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&w=800&q=60',
+          'https://raw.githubusercontent.com/awes0m/fluttering_drums/refs/heads/master/fluttering_drums.jpg',
       link:
-          'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&w=2000&q=80',
+          'https://github.com/awes0m/fluttering_drums/blob/master/buillt_app/fdrums_byAwesom.apk',
     ),
     GalleryItem(
-      id: '4',
-      title: 'Forest Lake',
-      type: GalleryItemType.painting,
+      id: '5',
+      title: 'Drum-ru - A Virtual drum (Windows/PC Download)',
+      type: GalleryItemType.app,
       imageUrl:
-          'https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&w=800&q=60',
-      link:
-          'https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&w=2000&q=80',
+          'https://raw.githubusercontent.com/awes0m/pybeats/refs/heads/main/app-screenshot.JPG',
+      link: 'https://github.com/awes0m/pybeats',
     ),
     // More apps
     GalleryItem(
-      id: '5',
-      title: 'Task Master',
+      id: '6',
+      title: 'Slider- A fun Numbers game! [LIVE]',
       type: GalleryItemType.app,
       imageUrl:
-          'https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&w=800&q=60',
-      link: 'https://example.com/task-master',
+          'https://raw.githubusercontent.com/awes0m/glutter-fames/refs/heads/main/sliderr/SCREENSHOTS/Capture.JPG',
+      link: 'https://awes0m.github.io/jsTgames/slider_game_flutter/#/',
     ),
     GalleryItem(
-      id: '6',
-      title: 'Fitness Pro',
+      id: '7',
+      title:
+          'Rock Paper Somssers- Play the classic game You Vs Computer! [LIVE]',
       type: GalleryItemType.app,
       imageUrl:
-          'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&w=800&q=60',
-      link: 'https://example.com/fitness-pro',
+          'https://plus.unsplash.com/premium_photo-1661607003079-4b95a804f9b2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://awes0m.github.io/jsTgames/rock_paper_scissors/index.html',
+    ),
+
+    GalleryItem(
+      id: '8',
+      title: 'The memory game [LIVE]',
+      type: GalleryItemType.app,
+      imageUrl:
+          'https://images.unsplash.com/photo-1593873515742-2cbca56823b4?q=80&w=2056&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://awes0m.github.io/jsTgames/memory_game/index.html',
+    ),
+    GalleryItem(
+      id: '9',
+      title: 'Wack a Mole [LIVE]',
+      type: GalleryItemType.app,
+      imageUrl:
+          'https://plus.unsplash.com/premium_photo-1725408008366-390dfe32d0a6?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://awes0m.github.io/jsTgames/wack_a_mole/index.html',
     ),
   ];
 });

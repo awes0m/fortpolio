@@ -129,7 +129,7 @@ class _HeroPageState extends State<HeroPage>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          'Som Home — A Digital Journey of a Creative Mind',
+                          '{Beta!} Som Home — A Digital Journey ',
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
@@ -147,12 +147,12 @@ class _HeroPageState extends State<HeroPage>
                         ),
                         SizedBox(height: 12),
                         Text(
-                          'You are free to use this gallery for inspiration and reference , Download them or use it for your own creative break... All my works are under Creative Commons.',
+                          'You are free to use my work for inspiration and reference , Download them or use it for your own creative break... All my works are under Creative Commons.',
                           style: TextStyle(fontSize: 16, height: 1.5),
                         ),
                         SizedBox(height: 12),
                         Text(
-                          'try it out.',
+                          'Do Try it out! \n Any help you gain or fun you have is my Prize! :-)',
                           style: TextStyle(fontSize: 16, height: 1.5),
                         ),
                       ],
