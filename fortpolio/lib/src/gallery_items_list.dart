@@ -12,7 +12,7 @@ final galleryProvider = Provider<List<GalleryItem>>((ref) {
       type: GalleryItemType.app,
       imageUrl:
           'https://raw.githubusercontent.com/awes0m/numero_uno/refs/heads/main/Numero-uno.jpg',
-      link: 'https://awes0m.github.io/numerouno/',
+      link: 'https://awes0m.github.io/numero_uno/',
     ),
     GalleryItem(
       id: '2',
@@ -77,6 +77,14 @@ final galleryProvider = Provider<List<GalleryItem>>((ref) {
     ),
     GalleryItem(
       id: '9',
+      title: 'Wack a Mole [LIVE]',
+      type: GalleryItemType.app,
+      imageUrl:
+          'https://plus.unsplash.com/premium_photo-1725408008366-390dfe32d0a6?q=80&w=1120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      link: 'https://awes0m.github.io/jsTgames/wack_a_mole/index.html',
+    ),
+    GalleryItem(
+      id: '10',
       title: 'Wack a Mole [LIVE]',
       type: GalleryItemType.app,
       imageUrl:
