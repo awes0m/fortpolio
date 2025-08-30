@@ -121,21 +121,30 @@ final galleryProvider = Provider<List<GalleryItem>>((ref) {
     ),
     GalleryItem(
       id: '14',
-      title: 'Under The Umbrella',
+      title: 'Giyu_tanjiro',
       type: GalleryItemType.painting,
       imageUrl:
-          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/UnderTheUmbrella.jpg',
+          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/Giyu_tanjiro.jpg',
       link:
-          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/UnderTheUmbrella.jpg',
+          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/Giyu_tanjiro.jpg',
     ),
     GalleryItem(
-      id: '14',
+      id: '15',
       title: 'The Light and death',
       type: GalleryItemType.painting,
       imageUrl:
           'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/ryukLight.jpg',
       link:
           'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/ryukLight.jpg',
+    ),
+    GalleryItem(
+      id: '16',
+      title: 'Under The Umbrella',
+      type: GalleryItemType.painting,
+      imageUrl:
+          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/UnderTheUmbrella.jpg',
+      link:
+          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/UnderTheUmbrella.jpg',
     ),
   ];
 });

@@ -88,7 +88,10 @@ class _HeroPageState extends State<HeroPage>
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('About - Som Home'), centerTitle: true),
+      appBar: AppBar(
+        title: const Text('About - Som ❤️ Home'),
+        centerTitle: true,
+      ),
       body: Listener(
         onPointerSignal: _onPointerSignal,
         child: GestureDetector(
@@ -129,7 +132,7 @@ class _HeroPageState extends State<HeroPage>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Text(
-                          '{Beta!} Som Home — A Digital Journey ',
+                          'Som ❤️ Home — A Digital Journey ',
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
