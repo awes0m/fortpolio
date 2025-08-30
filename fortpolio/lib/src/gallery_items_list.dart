@@ -13,7 +13,7 @@ final galleryProvider = Provider<List<GalleryItem>>((ref) {
       imageUrl:
           'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/Eventually.jpg',
       link:
-          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/Eventually.jpgl',
+          'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/Eventually.jpg',
     ),
 
     GalleryItem(
@@ -130,7 +130,7 @@ final galleryProvider = Provider<List<GalleryItem>>((ref) {
     ),
     GalleryItem(
       id: '14',
-      title: 'Under The Umbrella',
+      title: 'The Light and death',
       type: GalleryItemType.painting,
       imageUrl:
           'https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/artworks/ryukLight.jpg',
