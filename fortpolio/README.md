@@ -1,5 +1,7 @@
 # Walkman-style Gallery (Flutter Web)
 
+![App Logo](/assets/som_home_icon.png)
+
 A responsive Flutter Web application featuring a Sony Walkman-style floating album display. Built with default Flutter routing and Riverpod for state management.
 
 ## Features

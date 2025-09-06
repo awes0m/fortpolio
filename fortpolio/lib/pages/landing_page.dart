@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../providers/gallery_provider.dart';
+import '../utils/utils.dart';
 import '../widgets/walkman_album.dart';
 import '../models/gallery_item.dart';
 import '../utils/web_actions.dart';
@@ -25,7 +26,17 @@ class LandingPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Som Home-A Creative Gully'),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            appLogoCircle,
+            SizedBox(width: 12),
+            const Text(
+              'Som Home- A Creative Gully',
+              style: TextStyle(fontSize: 20, fontFamily: 'Pacifico'),
+            ),
+          ],
+        ),
         centerTitle: true,
         actions: [
           Padding(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pwa_install/pwa_install.dart';
 
 import 'theme/app_theme.dart';
 import 'pages/landing_page.dart';
@@ -7,6 +8,11 @@ import 'pages/painting_detail_page.dart';
 import 'pages/hero_page.dart';
 
 void main() {
+  PWAInstall().setup(
+    installCallback: () {
+      debugPrint('APP INSTALLED!');
+    },
+  );
   // Riverpod root scope
   runApp(const ProviderScope(child: MyApp()));
 }

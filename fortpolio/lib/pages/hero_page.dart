@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:fortpolio/utils/utils.dart';
 
 import 'landing_page.dart';
 
@@ -89,7 +90,11 @@ class _HeroPageState extends State<HeroPage>
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About - Som ❤️ Home'),
+        //display app logo in a small box
+        title: const Text(
+          'About- Som Home ',
+          style: TextStyle(fontSize: 22, fontStyle: FontStyle.italic),
+        ),
         centerTitle: true,
       ),
       body: Listener(
@@ -130,13 +135,19 @@ class _HeroPageState extends State<HeroPage>
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Som ❤️ Home — A Digital Journey ',
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      children: [
+                        Row(
+                          children: [
+                            appLogoCircle,
+                            SizedBox(width: 12),
+                            const Text(
+                              'Som ❤️ Home — A Digital Journey ',
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(height: 16),
                         Text(
