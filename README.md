@@ -1,6 +1,6 @@
-# Walkman-style Gallery (Flutter Web)
+<img src="https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/fortpolio/assets/som_home_icon.png" alt="App Logo" width="200"/>
 
- [Visit site](https://awes0m.github.io/fortpolio/)
+# Walkman-style Gallery (Flutter Web)
 
 A responsive Flutter Web application featuring a Sony Walkman-style floating album display. Built with default Flutter routing and Riverpod for state management.
 
@@ -12,6 +12,12 @@ A responsive Flutter Web application featuring a Sony Walkman-style floating alb
 - Default Navigator routing (no third-party navigation)
 - Riverpod-based, easily swappable data source
 - Fully responsive for desktop, tablet, and mobile
+
+## Screenshot
+
+![SCREENSHOT](https://raw.githubusercontent.com/awes0m/fortpolio/refs/heads/main/fortpolio/assets/app_sc.jpg)
+
+## [Visit Site](https://awes0m.github.io/fortpolio/)
 
 ## Tech Stack
 
@@ -70,20 +76,27 @@ Routing is handled in `main.dart` with `routes` and `onGenerateRoute`.
 ## Run the App (Web)
 
 1. Enable Flutter web (one-time):
+
    ```bash
    flutter config --enable-web
    ```
+
 2. Install dependencies:
+
    ```bash
    flutter pub get
    ```
+
 3. Run in a browser (Chrome or Edge):
+
    ```bash
    flutter run -d chrome
    # or
    flutter run -d edge
    ```
+
 4. Build for release (optional):
+
    ```bash
    flutter build web
    ```
@@ -121,4 +134,3 @@ Routing is handled in `main.dart` with `routes` and `onGenerateRoute`.
 ## License
 
 This project is provided as-is for demonstration. Replace assets/links with your own content if distributing.
-
