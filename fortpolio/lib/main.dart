@@ -5,6 +5,7 @@ import 'package:pwa_install/pwa_install.dart';
 import 'theme/app_theme.dart';
 import 'pages/landing_page.dart';
 import 'pages/painting_detail_page.dart';
+import 'pages/app_detail_page.dart';
 import 'pages/hero_page.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HeroPage(), // initial: Hero/About page
         '/gallery': (context) => const LandingPage(),
       },
-      // Handle dynamic routes like /painting/:id
+      // Handle dynamic routes like /painting/:id and /app/:id
       onGenerateRoute: (settings) {
         final name = settings.name ?? '/';
         if (name.startsWith('/painting/')) {
@@ -40,6 +41,16 @@ class MyApp extends StatelessWidget {
           return PageRouteBuilder(
             settings: settings,
             pageBuilder: (_, __, ___) => PaintingDetailPage(itemId: id),
+            transitionsBuilder: (_, animation, __, child) {
+              // Smooth fade transition between pages
+              return FadeTransition(opacity: animation, child: child);
+            },
+          );
+        } else if (name.startsWith('/app/')) {
+          final id = name.split('/').last;
+          return PageRouteBuilder(
+            settings: settings,
+            pageBuilder: (_, __, ___) => AppDetailPage(itemId: id),
             transitionsBuilder: (_, animation, __, child) {
               // Smooth fade transition between pages
               return FadeTransition(opacity: animation, child: child);

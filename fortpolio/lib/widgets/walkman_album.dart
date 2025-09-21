@@ -40,7 +40,8 @@ class _WalkmanAlbumState extends ConsumerState<WalkmanAlbum> {
   }
 
   double _responsiveViewportFraction(double width) {
-    if (width < 500) return 0.9;
+    if (width < 400) return 0.95;
+    if (width < 600) return 0.80;
     if (width < 900) return 0.75;
     if (width < 1300) return 0.65;
     return 0.55;
@@ -94,7 +95,7 @@ class _WalkmanAlbumState extends ConsumerState<WalkmanAlbum> {
                 ),
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
             _DotsIndicator(
               count: widget.items.length,
               current: (_page).round().clamp(0, widget.items.length - 1),
@@ -132,10 +133,11 @@ class _WalkmanAlbumState extends ConsumerState<WalkmanAlbum> {
   }
 
   double _cardHeightFor(double width) {
-    if (width < 500) return 320;
-    if (width < 900) return 380;
-    if (width < 1300) return 440;
-    return 520;
+    if (width < 400) return 280;
+    if (width < 600) return 340;
+    if (width < 900) return 400;
+    if (width < 1300) return 460;
+    return 540;
   }
 }
 
@@ -226,17 +228,32 @@ class _WalkmanCard extends StatelessWidget {
                       left: 16,
                       right: 16,
                       bottom: 12,
-                      child: Row(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          _TypeBadge(type: item.type),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: Text(
-                              item.title,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: Theme.of(context).textTheme.titleMedium,
-                            ),
+                          Row(
+                            children: [
+                              _TypeBadge(type: item.type),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  item.title,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme.of(
+                                    context,
+                                  ).textTheme.titleMedium,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            item.description,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.bodySmall
+                                ?.copyWith(color: Colors.white70),
                           ),
                         ],
                       ),
