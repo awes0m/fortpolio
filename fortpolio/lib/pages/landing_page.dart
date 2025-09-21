@@ -6,6 +6,9 @@ import '../utils/utils.dart';
 import '../widgets/walkman_album.dart';
 import '../models/gallery_item.dart';
 
+// Tracks whether the orientation tip banner has been dismissed by the user
+final orientationTipDismissedProvider = StateProvider<bool>((ref) => false);
+
 class LandingPage extends ConsumerWidget {
   const LandingPage({super.key});
 
@@ -22,6 +25,13 @@ class LandingPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final items = ref.watch(filteredGalleryProvider);
     final filter = ref.watch(galleryFilterProvider);
+
+    // Orientation and size info
+    final media = MediaQuery.of(context);
+    final isPortrait = media.orientation == Orientation.portrait;
+    final isNarrow = media.size.width < 600; // treat as mobile width
+
+    final tipDismissed = ref.watch(orientationTipDismissedProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -72,6 +82,7 @@ class LandingPage extends ConsumerWidget {
         children: [
           // Subtle backdrop gradient to enhance depth
           const _Backdrop(),
+
           // Centered Walkman-style album or mobile grid
           Center(
             child: LayoutBuilder(
@@ -106,6 +117,19 @@ class LandingPage extends ConsumerWidget {
               },
             ),
           ),
+
+          // Orientation tip banner (mobile portrait only)
+          if (isNarrow && isPortrait && !tipDismissed)
+            SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: _OrientationTipBanner(
+                  onDismiss: () =>
+                      ref.read(orientationTipDismissedProvider.notifier).state =
+                          true,
+                ),
+              ),
+            ),
         ],
       ),
     );
@@ -128,6 +152,72 @@ class _EmptyState extends StatelessWidget {
             style: TextStyle(color: Colors.white70),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Top-of-screen, dismissible banner recommending landscape on mobile portrait
+class _OrientationTipBanner extends StatelessWidget {
+  final VoidCallback onDismiss;
+  const _OrientationTipBanner({required this.onDismiss});
+
+  @override
+  Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    return Material(
+      color: Colors.transparent,
+      child: Container(
+        decoration: BoxDecoration(
+          color: colors.inverseSurface.withValues(alpha: 0.9),
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black54,
+              blurRadius: 10,
+              offset: Offset(0, 4),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        child: Row(
+          children: [
+            const Icon(
+              Icons.screen_rotation,
+              size: 20,
+              color: Colors.deepOrange,
+            ),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                'For a better experience, please rotate your phone to Landscape mode.',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: Colors.black,
+                  shadows: [
+                    Shadow(
+                      color: Colors.orangeAccent.withValues(alpha: 0.5),
+                      offset: Offset(0, 1),
+                      blurRadius: 2,
+                    ),
+                  ],
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                softWrap: false,
+              ),
+            ),
+            IconButton(
+              tooltip: 'Dismiss',
+              icon: const Icon(
+                Icons.close,
+                size: 18,
+                color: Color.fromARGB(255, 255, 0, 0),
+              ),
+              onPressed: onDismiss,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -163,11 +253,15 @@ class _MobileGrid extends StatelessWidget {
       child: items.isEmpty
           ? const _EmptyState()
           : GridView.builder(
+              scrollDirection: Axis.vertical,
+              controller: ScrollController(),
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
+              physics: BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics(),
+              ),
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 180,
-                childAspectRatio: 0.75,
+                maxCrossAxisExtent: 800,
+                childAspectRatio: .9,
                 crossAxisSpacing: 12,
                 mainAxisSpacing: 12,
               ),
